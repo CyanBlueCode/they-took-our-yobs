@@ -1,6 +1,6 @@
 // DUMMY run-through script
 import { chromium } from 'playwright';
-import { processJobListings } from '../src/navigation.js';
+import { processJobListings } from '../utils/navigation.js';
 import fs from 'fs';
 
 (async () => {
@@ -14,10 +14,11 @@ import fs from 'fs';
   process.stdin.resume();
   process.stdin.setEncoding("utf8");
   process.stdin.once("data", async () => {
-    const applicationData = JSON.parse(fs.readFileSync('./data/application.json', 'utf-8'));
+    const applicationData = JSON.parse(fs.readFileSync('src/data/application.json', 'utf-8'));
     await processJobListings(page, applicationData);
     console.log("Run finished.");
-    await browser.close();
-    process.exit(0);
+    // NOTE COMMENT OUT FOR DEV
+    // await browser.close();
+    // process.exit(0);
   });
 })();
