@@ -1,0 +1,8 @@
+{
+  "fullName": "John Doe",
+  "email": "johndoe@example.com",
+  "phone": "+1 555 123 4567",
+  "workAuth": "Yes",
+  "relocation": "No",
+  "salaryExpectation": "100000"
+}

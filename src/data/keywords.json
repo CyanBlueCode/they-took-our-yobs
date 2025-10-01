@@ -1,0 +1,14 @@
+{
+  "tech": {
+    "react": ["react", "reactjs", "react.js"],
+    "nextjs": ["nextjs", "next.js", "next js"],
+    "aws": ["aws", "amazon web services"]
+  },
+  "citizenship": {
+    "us": ["us", "u.s.", "united states", "usa"]
+  },
+  "languages": {
+    "mandarin": ["mandarin", "chinese"],
+    "spanish": ["spanish", "español"]
+  }
+}

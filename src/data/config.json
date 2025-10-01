@@ -1,0 +1,7 @@
+{
+  "jobKeywords": "Software Engineer",
+  "jobLocation": "United States",
+  "maxApplicationsPerRun": 5,
+  "pauseBetweenApplicationsMs": 5000,
+  "logLevel": "debug"
+}

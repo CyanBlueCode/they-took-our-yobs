@@ -1,0 +1,16 @@
+{
+  "experienceYears": {
+    "react": 8,
+    "nextjs": 4,
+    "aws": 6
+  },
+  "boolean": {
+    "work-authorization": true,
+    "relocate": false,
+    "background-check": true
+  },
+  "languages": {
+    "mandarin": "fluent",
+    "spanish": "basic"
+  }
+}

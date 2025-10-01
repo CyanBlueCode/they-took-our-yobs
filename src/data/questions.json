@@ -1,0 +1,17 @@
+[
+  {
+    "id": "experience-years",
+    "question": "How many years of experience do you have in",
+    "answerType": "number"
+  },
+  {
+    "id": "work-authorization",
+    "question": "Are you legally authorized to work in the United States?",
+    "answerType": "boolean"
+  },
+  {
+    "id": "relocate",
+    "question": "Are you willing to relocate?",
+    "answerType": "boolean"
+  }
+]

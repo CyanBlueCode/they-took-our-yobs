@@ -1,0 +1,23 @@
+{
+  "name": "they-took-our-yobs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyanBlueCode/they-took-our-yobs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CyanBlueCode/they-took-our-yobs/issues"
+  },
+  "homepage": "https://github.com/CyanBlueCode/they-took-our-yobs#readme",
+  "description": "",
+  "devDependencies": {
+    "playwright": "^1.55.1"
+  }
+}
