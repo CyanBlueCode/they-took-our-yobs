@@ -4,9 +4,17 @@ import { processJobListings } from '../utils/navigation.js';
 import fs from 'fs';
 
 (async () => {
-  const browser = await chromium.launch({ headless: false, slowMo: 50 });
-  const context = await browser.newContext();
+  // const browser = await chromium.launch({ headless: false, slowMo: 50 });
+  // const context = await browser.newContext();
+  // const page = await context.newPage();
+    const browser = await chromium.launch({ headless: false, slowMo: 50 });
+  const context = await browser.newContext({ storageState: 'storageState.json', viewport: null });
   const page = await context.newPage();
+
+  // Start on the page you normally go to after login
+  await page.goto('https://www.linkedin.com/jobs/search/?f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true');
+  // await page.goto('https://www.linkedin.com/jobs/search/?keywords=remote');
+
 
   console.log("Open LinkedIn, log in manually, and navigate to your desired job search page.");
   console.log("Then press Enter here to start automation...");

@@ -45,7 +45,7 @@ export async function processJobListings(page, applicationData) {
     await card.click();
     await page.waitForTimeout(2000); // let right-hand panel render
 
-    // safer selector for Easy Apply
+    // selector for Easy Apply
     const easyApplyButton = await page.$(
       'button:has(span:has-text("Easy Apply"))'
     );
@@ -54,7 +54,9 @@ export async function processJobListings(page, applicationData) {
       await easyApplyButton.click();
       await page.waitForTimeout(2000);
 
-      // Close modal
+      // TODO modal nav & form filling logic
+
+      // Close modal w/o saving
       const closeBtn = await page.$('button.artdeco-modal__dismiss');
       if (closeBtn) {
         await closeBtn.click();
