@@ -27,6 +27,8 @@ export async function loadAllJobCards(page, maxScrolls = 20) {
   return await page.$$('li[data-occludable-job-id]');
 }
 
+import { processEasyApplyModal } from '../handlers/applicationHandler.js';
+
 export async function processJobListings(page, applicationData) {
   // Grab fresh job cards each loop iteration to avoid stale element handles
   const jobCards = await loadAllJobCards(page);
@@ -54,20 +56,11 @@ export async function processJobListings(page, applicationData) {
       await easyApplyButton.click();
       await page.waitForTimeout(2000);
 
-      // TODO modal nav & form filling logic
-
-      // Close modal w/o saving
-      const closeBtn = await page.$('button.artdeco-modal__dismiss');
-      if (closeBtn) {
-        await closeBtn.click();
-        await page.waitForTimeout(1000);
-
-        // Handle Discard/Save prompt
-        const discardBtn = await page.$('button:has-text("Discard")');
-        if (discardBtn) {
-          console.log('Discard prompt detected → discarding.');
-          await discardBtn.click();
-        }
+      try {
+        await processEasyApplyModal(page, applicationData);
+      } catch (error) {
+        console.error(`Error processing application for job #${i + 1}:`, error);
+        await closeModal(page);
       }
     } else {
       console.log(`No Easy Apply for job #${i + 1}`);
@@ -85,6 +78,17 @@ export async function processJobListings(page, applicationData) {
   }
 }
 
-// div.job-card-container--clickable
-// disabled ember-view job-card-container__link
-// job-card-list__title--link
+async function closeModal(page) {
+  const closeBtn = await page.$('button.artdeco-modal__dismiss');
+  if (closeBtn) {
+    await closeBtn.click();
+    await page.waitForTimeout(1000);
+
+    const discardBtn = await page.$('button:has-text("Discard")');
+    if (discardBtn) {
+      console.log('Discard prompt detected → discarding.');
+      await discardBtn.click();
+    }
+  }
+}
+

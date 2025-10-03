@@ -13,5 +13,10 @@
     "id": "relocate",
     "question": "Are you willing to relocate?",
     "answerType": "boolean"
+  },
+  {
+    "id": "background-check",
+    "question": "Are you willing to undergo a background check, in accordance with local law/regulations?",
+    "answerType": "boolean"
   }
 ]
