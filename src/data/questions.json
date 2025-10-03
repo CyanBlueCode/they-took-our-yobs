@@ -33,5 +33,75 @@
     "id": "linkedin-profile",
     "question": "LinkedIn Profile",
     "answerType": "string"
-  }
+  },
+  {
+    "id": "certifications",
+    "question": "Do you have the following license or certification:",
+    "answerType": "boolean"
+  },
+  {
+    "id": "drivers-license",
+    "question": "Do you have a valid driver's license?",
+    "answerType": "boolean"
+  },
+  {
+    "id": "drug-test",
+    "question": "Are you willing to take a drug test, in accordance with local law/regulations?",
+    "answerType": "boolean"
+  },
+  {
+    "id": "education",
+    "question": "Have you completed the following level of education:",
+    "answerType": "boolean"
+  },
+  {
+    "id": "expertise-years",
+    "question": "How many years of work experience do you have with",
+    "answerType": "boolean"
+  },
+  {
+    "id": "gpa",
+    "question": "What is your university grade point average (4.0 GPA Scale)?",
+    "answerType": "number"
+  },
+  {
+    "id": "hybrid-work",
+    "question": "Are you comfortable working in a hybrid setting?",
+    "answerType": "boolean"
+  },
+  {
+    "id": "language",
+    "question": "What is your level of proficiency in [Language]?",
+    "answerType": "object" // dropdown select [none, conversational, professional, native or bilingual]
+  },
+  {
+    "id": "industry-experience-years",
+    "question": "How many years of [Industry] experience do you currently have?",
+    "answerType": "number"
+  },
+  {
+    "id": "function-experience-years",
+    "question": "How many years of [Job Function] experience do you currently have?",
+    "answerType": "number"
+  },
+  {
+    "id": "location",
+    "question": "Are you comfortable commuting to this job's location?",
+    "answerType": "boolean"
+  },
+  {
+    "id": "onsite",
+    "question": "Are you comfortable working in an onsite setting?",
+    "answerType": "boolean"
+  },
+  {
+    "id": "remote",
+    "question": "Are you comfortable working in a remote setting?",
+    "answerType": "boolean"
+  },
+  {
+    "id": "urgent-hire",
+    "question": "We must fill this position urgently. Can you start immediately?",
+    "answerType": "boolean"
+  },
 ]
