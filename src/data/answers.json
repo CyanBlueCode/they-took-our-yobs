@@ -7,10 +7,14 @@
   "boolean": {
     "work-authorization": true,
     "relocate": false,
-    "background-check": true
+    "background-check": true,
+    "require-visa": false
   },
   "languages": {
     "mandarin": "fluent",
     "spanish": "basic"
-  }
+  },
+  "linkedinProfile": "https://www.linkedin.com/in/chase-y-b28b0a106/",
+  "website": null,
+  "location": "CA California"
 }

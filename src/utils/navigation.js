@@ -47,13 +47,16 @@ export async function processJobListings(page, applicationData) {
     await card.click();
     await page.waitForTimeout(2000); // let right-hand panel render
 
-    // selector for Easy Apply
-    const easyApplyButton = await page.$(
-      'button:has(span:has-text("Easy Apply"))'
-    );
-    if (easyApplyButton) {
-      console.log(`Easy Apply available for job #${i + 1}`);
-      await easyApplyButton.click();
+    // selector for Easy Apply or Continue
+    const easyApplyButton = await page.$('button:has(span:has-text("Easy Apply"))');
+    const continueButton = await page.$('button:has(span:has-text("Continue"))');
+    
+    if (easyApplyButton || continueButton) {
+      const buttonText = easyApplyButton ? 'Easy Apply' : 'Continue';
+      console.log(`${buttonText} available for job #${i + 1}`);
+      
+      const button = easyApplyButton || continueButton;
+      await button.click();
       await page.waitForTimeout(2000);
 
       try {
@@ -63,7 +66,7 @@ export async function processJobListings(page, applicationData) {
         await closeModal(page);
       }
     } else {
-      console.log(`No Easy Apply for job #${i + 1}`);
+      console.log(`No Easy Apply or Continue for job #${i + 1}`);
     }
   }
 
@@ -79,16 +82,21 @@ export async function processJobListings(page, applicationData) {
 }
 
 async function closeModal(page) {
-  const closeBtn = await page.$('button.artdeco-modal__dismiss');
-  if (closeBtn) {
-    await closeBtn.click();
-    await page.waitForTimeout(1000);
+  try {
+    const closeBtn = await page.$('button.artdeco-modal__dismiss');
+    if (closeBtn) {
+      await closeBtn.click();
+      await page.waitForTimeout(2000);
 
-    const discardBtn = await page.$('button:has-text("Discard")');
-    if (discardBtn) {
-      console.log('Discard prompt detected → discarding.');
-      await discardBtn.click();
+      const discardBtn = await page.$('button:has-text("Discard")');
+      if (discardBtn) {
+        console.log('Discard prompt detected → discarding.');
+        await discardBtn.click();
+        await page.waitForTimeout(1000);
+      }
     }
+  } catch (error) {
+    console.log('Error closing modal, continuing to next job');
   }
 }
 

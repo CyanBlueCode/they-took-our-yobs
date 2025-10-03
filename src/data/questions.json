@@ -18,5 +18,20 @@
     "id": "background-check",
     "question": "Are you willing to undergo a background check, in accordance with local law/regulations?",
     "answerType": "boolean"
+  },
+  {
+    "id": "phone-number",
+    "question": "Mobile phone number",
+    "answerType": "number"
+  },
+  {
+    "id": "require-visa",
+    "question": "Will you now, or in the future, require sponsorship for employment visa status (e.g. H-1B visa status)?",
+    "answerType": "boolean"
+  },
+  {
+    "id": "linkedin-profile",
+    "question": "LinkedIn Profile",
+    "answerType": "string"
   }
 ]

@@ -1,14 +1,23 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-module.exports = {
-  logSuccess: (jobButton) => {
-    // append JobId + timestamp to success log
-  },
-  logFailure: (jobButton, error) => {
-    // append JobId + timestamp + error message
-  },
-  logCustomQuestion: (label, jobButton) => {
-    // append JobId + URL + label to custom questions log
+export function logFailure(jobData, error) {
+  const timestamp = new Date().toISOString();
+  const logEntry = {
+    jobId: jobData.jobId,
+    url: jobData.url,
+    error,
+    timestamp
+  };
+  
+  const logPath = path.join(process.cwd(), 'failed-applications.json');
+  let logs = [];
+  
+  if (fs.existsSync(logPath)) {
+    logs = JSON.parse(fs.readFileSync(logPath, 'utf8'));
   }
-};
+  
+  logs.push(logEntry);
+  fs.writeFileSync(logPath, JSON.stringify(logs, null, 2));
+  console.log(`Logged failure for job ${jobData.jobId}`);
+}
