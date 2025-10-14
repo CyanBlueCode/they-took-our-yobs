@@ -25,8 +25,11 @@ import fs from 'fs';
     const applicationData = JSON.parse(fs.readFileSync('src/data/application.json', 'utf-8'));
     await processJobListings(page, applicationData);
     console.log("Run finished.");
+    page.waitForTimeout(10000000)
     // NOTE COMMENT OUT FOR DEV
     // await browser.close();
     // process.exit(0);
   });
 })();
+
+// REVIEW: flow: run.js (entry) -> (src root) index.js -> navigation.js/applicationHandler.js

@@ -4,6 +4,10 @@ export async function processEasyApplyModal(page, applicationData) {
   const maxSteps = 12;
   let currentStep = 0;
 
+  // TODO figure FIRST how to timeout/pause the Playwright browser window on validation error for dev; alt,
+  // you can just comment out the auto-advance flow during dev (navigation.js)
+  // ANCHOR step 1. make default questions work properly
+  // TODO implement page.waitForTimeout(2000) to pause the app on error instead of using ctrl+c to quit out
   try {
     while (currentStep < maxSteps) {
       console.log(`Processing modal step ${currentStep + 1}`);
@@ -37,6 +41,7 @@ export async function processEasyApplyModal(page, applicationData) {
         await page.waitForTimeout(1500);
       } else {
         console.log('No next/submit button found - ending modal process');
+         page.waitForTimeout(100000000);
         break;
       }
     }
@@ -44,10 +49,16 @@ export async function processEasyApplyModal(page, applicationData) {
     if (error.message === 'VALIDATION_ERROR') {
       await handleValidationError(page);
     }
+    page.waitForTimeout(100000000);
     throw error;
   }
 }
 
+// ANCHOR step 2. make sure on validation fail, we log questions for manual answering at EOD
+// NOTE for jobId's, we might want to keep them in a separate key altogether
+// step 2.1. create a new alt flow that allows us to run through applicationHandler.js flow again, but for a
+// specific list of jobId's only
+// TODO error handling
 async function handleValidationError(page) {
   try {
     const jobId = await getJobId(page);

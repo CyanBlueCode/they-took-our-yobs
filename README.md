@@ -19,6 +19,10 @@ Automate the repetitive LinkedIn Easy Apply process for filtered job search resu
 * Authentication handled manually + persistent session via Playwright storage state.
 * No heavy AI or fuzzy NLP needed — mostly exact or partial keyword matching.
 
+
+**NOTES:**
+* Never use REMEMBER ME for login; repeat use triggers LinkedIn throttler/potential bot detection
+
 ---
 
 # **Project Architecture & Dir Structure**
@@ -144,3 +148,49 @@ project-root/
 5. once browser reopens, pull up job search page with all desired criteria
 5. go back to console, hit ENTER again to start Nodemon run.js
 6. follow console prompts
+
+
+---
+# **Screening Questions**
+NOTES:
+- Brackets indicate [variable] value (variable values will be populated and stored in keywords.json later)
+- ">" indicates answer to the question in line above; questions with variables will have different answers depending on variable
+- Custom Question is special--it can be any custom question, but the answer must be boolean or numerical
+- Ignore/skip/omit everything in #Skip section; irrelevant questions for our use for now
+- 
+
+# Boolean
+Have you completed the following level of education: [Degree]?
+How many years of [Job_Function] experience do you currently have?
+Are you willing to undergo a background check, in accordance with local law/regulations?
+> yes
+Do you have a valid driver's license?
+> yes
+Are you willing to take a drug test, in accordance with local law/regulations?
+> yes
+Are you comfortable commuting to this job's location?
+> no
+Are you comfortable working in an onsite setting?
+> no
+Are you comfortable working in a hybrid setting?
+> yes
+Are you comfortable working in a remote setting?
+> yes
+We must fill this position urgently. Can you start immediately?
+> yes
+Will you now, or in the future, require sponsorship for employment visa status (e.g. H-1B visa status)?
+> no
+Are you legally authorized to work in the United States?
+> yes
+
+# Number
+How many years of work experience do you have with [Skill/Tech]?
+How many years of [Industry] experience do you currently have?
+
+# Boolean/Number
+[Custom Question; answer type can only be: yes/no or numeric]
+
+# Skip
+What is your level of proficiency in [Language]?
+What is your university grade point average (4.0 GPA Scale)?
+Do you have the following license or certification: [License/Certification]?

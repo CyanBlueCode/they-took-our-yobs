@@ -10,4 +10,4 @@ const config = {
   timeout: 60000, // global timeout for steps
 };
 
-module.exports = config;
+export default config;
