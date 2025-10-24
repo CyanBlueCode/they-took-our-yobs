@@ -1,4 +1,4 @@
-import { logFailure } from '../utils/logger.js';
+
 
 export async function processEasyApplyModal(page, applicationData) {
   const maxSteps = 12;
@@ -72,7 +72,7 @@ async function handleValidationError(page) {
   try {
     const jobId = await getJobId(page);
     const url = page.url();
-    logFailure({ jobId, url }, 'Validation error - required fields missing');
+    console.log('Validation error - required fields missing');
     
     console.log('Waiting 6 seconds before closing modal...');
     await page.waitForTimeout(6000);
@@ -120,16 +120,19 @@ async function uncheckFollowCompany(page) {
 }
 
 async function fillFormFields(page, applicationData) {
-  // Fill text inputs
+  // Fill text inputs (broader selector to catch all text inputs)
   const textInputs = await page.$$('input.artdeco-text-input--input');
+  console.log(`DEBUG: Found ${textInputs.length} text inputs`);
   for (const input of textInputs) {
     await fillTextInput(page, input, applicationData);
   }
 
-  // Fill dropdowns
-  const dropdowns = await page.$$('select.fb-dash-form-element__select-dropdown');
-  for (const dropdown of dropdowns) {
-    await fillDropdown(page, dropdown, applicationData);
+  // Fill dropdowns (broader selector to catch all dropdowns)
+  const dropdowns = await page.$$('select');
+  console.log(`DEBUG: Found ${dropdowns.length} dropdowns`);
+  for (let i = 0; i < dropdowns.length; i++) {
+    console.log(`DEBUG: Processing dropdown ${i + 1}`);
+    await fillDropdown(page, dropdowns[i], applicationData);
   }
 
   // Fill radio buttons
@@ -154,11 +157,14 @@ async function fillTextInput(page, input, applicationData) {
   }
 
   const label = await getInputLabel(page, input);
+  console.log(`DEBUG: Text input label: "${label}"`);
   const fillValue = getAnswerForLabel(label, applicationData);
+  console.log(`DEBUG: Text input answer: ${fillValue}`);
 
-  if (fillValue) {
-    console.log(`Filling text input "${label}" with: ${fillValue}`);
-    await input.fill(fillValue);
+  if (fillValue !== null && fillValue !== undefined) {
+    const stringValue = fillValue.toString();
+    console.log(`Filling text input "${label}" with: ${stringValue}`);
+    await input.fill(stringValue);
     await page.waitForTimeout(500);
   } else {
     console.log(`No answer found for text input "${label}"`);
@@ -180,26 +186,48 @@ async function fillDropdown(page, dropdown, applicationData) {
   }
 
   const label = await getDropdownLabel(page, dropdown);
+  console.log(`DEBUG: Dropdown label: "${label}"`);
   const fillValue = getAnswerForLabel(label, applicationData);
+  console.log(`DEBUG: Dropdown answer: ${fillValue}`);
   
   console.log(`Dropdown label: "${label}", looking for value: "${fillValue}"`);
 
-  if (fillValue) {
+  if (fillValue !== null && fillValue !== undefined) {
     const options = await dropdown.$$('option');
     let found = false;
+    
+    // For boolean values, try multiple formats
+    let searchValues = [];
+    if (typeof fillValue === 'boolean') {
+      if (fillValue) {
+        searchValues = ['Yes', 'True', 'true', '1'];
+      } else {
+        searchValues = ['No', 'False', 'false', '0'];
+      }
+    } else {
+      searchValues = [fillValue.toString()];
+    }
+    
+    console.log(`DEBUG: Searching dropdown for: ${searchValues.join(', ')}`);
     
     for (const option of options) {
       const optionText = await option.textContent();
       const optionValue = await option.getAttribute('value');
       
-      if (optionText?.toLowerCase().includes(fillValue.toLowerCase()) || 
-          optionValue?.toLowerCase().includes(fillValue.toLowerCase())) {
-        console.log(`Selecting dropdown "${label}" option: ${optionText}`);
-        await dropdown.selectOption(optionValue);
-        await page.waitForTimeout(500);
-        found = true;
-        break;
+      // Try each search value
+      for (const searchValue of searchValues) {
+        if (optionText?.toLowerCase().includes(searchValue.toLowerCase()) || 
+            optionValue?.toLowerCase().includes(searchValue.toLowerCase()) ||
+            optionText?.toLowerCase() === searchValue.toLowerCase() ||
+            optionValue?.toLowerCase() === searchValue.toLowerCase()) {
+          console.log(`Selecting dropdown "${label}" option: ${optionText}`);
+          await dropdown.selectOption(optionValue);
+          await page.waitForTimeout(500);
+          found = true;
+          break;
+        }
       }
+      if (found) break;
     }
     
     if (!found) {
@@ -211,7 +239,19 @@ async function fillDropdown(page, dropdown, applicationData) {
     if (label.includes('?')) {
       const jobId = await getJobId(page);
       const url = page.url();
-      logCustomQuestion({ jobId, url }, label, 'boolean');
+      
+      // Get dropdown options for logging
+      const options = await dropdown.$$('option');
+      const optionTexts = [];
+      for (const option of options) {
+        const optionText = await option.textContent();
+        const optionValue = await option.getAttribute('value');
+        if (optionText && optionText !== 'Select an option') {
+          optionTexts.push({ text: optionText.trim(), value: optionValue });
+        }
+      }
+      
+      logCustomQuestion({ jobId, url }, label, 'boolean', optionTexts);
     }
   }
 }
@@ -369,7 +409,10 @@ function getCustomAnswer(questionText) {
   
   // Check custom questions for exact match
   const customQuestion = customQuestions.find(q => q.question === cleanQuestion);
-  return customQuestion ? customQuestion.answer : null;
+  if (customQuestion && customQuestion.answer !== null) {
+    return customQuestion.answer.toString();
+  }
+  return null;
 }
 
 function getAnswerForLabel(label, applicationData) {
@@ -377,51 +420,106 @@ function getAnswerForLabel(label, applicationData) {
 
   const cleanLabel = label.replace(/\s+/g, ' ').trim();
   const lowerLabel = cleanLabel.toLowerCase();
+  console.log(`DEBUG: Processing label: "${cleanLabel}"`);
+  console.log(`DEBUG: Lower label: "${lowerLabel}"`);
 
   // Direct application data matches
+  console.log(`DEBUG: Checking direct matches`);
   if (lowerLabel.includes('phone') || lowerLabel.includes('mobile')) {
+    console.log(`DEBUG: Found phone match`);
     return applicationData.phone;
   }
   if (lowerLabel.includes('email')) {
+    console.log(`DEBUG: Found email match`);
     return applicationData.email;
   }
   if (lowerLabel.includes('name')) {
+    console.log(`DEBUG: Found name match`);
     return applicationData.fullName;
   }
 
   // Work authorization
+  console.log(`DEBUG: Checking work authorization`);
   if (lowerLabel.includes('legally authorized to work')) {
+    console.log(`DEBUG: Found work authorization match`);
     return answers.boolean['work-authorization'];
   }
 
   // Relocation/states
+  console.log(`DEBUG: Checking relocation`);
   if (lowerLabel.includes('relocating') || lowerLabel.includes('reside')) {
+    console.log(`DEBUG: Found relocation match`);
     return answers.location || null;
   }
 
+  // Check custom questions first (highest priority)
+  console.log(`DEBUG: Checking custom questions`);
+  const customAnswer = getCustomAnswer(cleanLabel);
+  console.log(`DEBUG: Custom answer: ${customAnswer}`);
+  if (customAnswer !== null) {
+    return customAnswer;
+  }
+
   // Match against questions.json patterns using partial matching
+  console.log(`DEBUG: Checking questions.json patterns`);
   for (const questionPattern of questions) {
     const questionLower = questionPattern.question.toLowerCase();
     if (lowerLabel.includes(questionLower) || questionLower.includes(lowerLabel)) {
+      console.log(`DEBUG: Found questions.json match: ${questionPattern.id}`);
       return getAnswerById(questionPattern.id, lowerLabel);
     }
   }
+  console.log(`DEBUG: No questions.json matches found`);
 
-  // Experience questions with tech keywords
+  // Experience questions with tech keywords (fallback)
+  console.log(`DEBUG: Checking experience condition - includes 'experience': ${lowerLabel.includes('experience')}, includes 'years': ${lowerLabel.includes('years')}`);
   if (lowerLabel.includes('experience') && lowerLabel.includes('years')) {
+    console.log(`DEBUG: Entering tech keyword matching`);
     const techMatch = findTechKeyword(lowerLabel);
+    console.log(`DEBUG: Tech match for "${lowerLabel}": ${techMatch}`);
     if (techMatch && answers.experienceYears[techMatch]) {
+      console.log(`DEBUG: Found experience years for ${techMatch}: ${answers.experienceYears[techMatch]}`);
       return answers.experienceYears[techMatch].toString();
     }
   }
 
+  console.log(`DEBUG: No answer found for: "${cleanLabel}"`);
   return null;
 }
 
 function getAnswerById(questionId, label) {
+  console.log(`DEBUG: getAnswerById called with questionId: ${questionId}, label: ${label}`);
+  
   // Check for direct answer in answers.json
   if (answers.boolean && answers.boolean[questionId] !== undefined) {
+    console.log(`DEBUG: Found boolean answer for ${questionId}: ${answers.boolean[questionId]}`);
     return answers.boolean[questionId];
+  }
+  
+  // Handle job function experience questions
+  if (questionId === 'job-function-experience') {
+    console.log(`DEBUG: Processing job-function-experience question`);
+    const lowerLabel = label.toLowerCase();
+    
+    // Try tech keywords first
+    if (lowerLabel.includes('experience') && lowerLabel.includes('years')) {
+      const techMatch = findTechKeyword(lowerLabel);
+      console.log(`DEBUG: Tech match in getAnswerById: ${techMatch}`);
+      if (techMatch && answers.experienceYears[techMatch] !== undefined) {
+        console.log(`DEBUG: Found experience years for ${techMatch}: ${answers.experienceYears[techMatch]}`);
+        return answers.experienceYears[techMatch].toString();
+      }
+    }
+    
+    // Try job function keywords
+    for (const [jobFunc, variations] of Object.entries(keywords.jobFunctions)) {
+      if (variations.some(variation => lowerLabel.includes(variation))) {
+        console.log(`DEBUG: Found job function match: ${jobFunc}`);
+        if (answers.jobFunction[jobFunc]) {
+          return answers.jobFunction[jobFunc].toString();
+        }
+      }
+    }
   }
   
   // Handle specific cases
@@ -437,15 +535,20 @@ function getAnswerById(questionId, label) {
     return answers.location || null;
   }
   
+  console.log(`DEBUG: No answer found for questionId: ${questionId}`);
   return null;
 }
 
 function findTechKeyword(label) {
-  for (const [tech, variations] of Object.entries(keywords.tech)) {
+  console.log(`DEBUG: Looking for tech in: "${label}"`);
+  for (const [tech, variations] of Object.entries(keywords.skills)) {
+    console.log(`DEBUG: Checking ${tech} with variations: ${variations.join(', ')}`);
     if (variations.some(variation => label.includes(variation))) {
+      console.log(`DEBUG: Found match: ${tech}`);
       return tech;
     }
   }
+  console.log(`DEBUG: No tech match found`);
   return null;
 }
 

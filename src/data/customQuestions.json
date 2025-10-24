@@ -4,7 +4,7 @@
     "url": "https://www.linkedin.com/jobs/search/?currentJobId=4317464986&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
     "question": "How many years of work experience do you have with TypeScript?",
     "answerType": "number",
-    "answer": null,
+    "answer": 3,
     "timestamp": "2025-10-24T05:33:59.874Z"
   },
   {
@@ -12,7 +12,39 @@
     "url": "https://www.linkedin.com/jobs/search/?currentJobId=4317464986&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
     "question": "Are you willing to participate in a coding challenge to showcase your skills?Are you willing to participate in a coding challenge to showcase your skills?",
     "answerType": "boolean",
-    "answer": null,
+    "answer": true,
     "timestamp": "2025-10-24T05:33:59.888Z"
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4311471398&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "How many years of work experience do you have with HL7 Standards?",
+    "answerType": "number",
+    "answer": 0,
+    "timestamp": "2025-10-24T05:54:47.691Z"
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4311471398&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "How many years of Hospitals and Health Care experience do you currently have?",
+    "answerType": "number",
+    "answer": 2,
+    "timestamp": "2025-10-24T05:54:47.699Z"
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4311471398&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "How many years of work experience do you have with React Native?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-10-24T06:22:36.829Z"
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4316809565&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "What is your level of proficiency in English?What is your level of proficiency in English?",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-10-24T06:25:56.106Z"
   }
 ]

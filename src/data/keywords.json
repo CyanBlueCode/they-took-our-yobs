@@ -1,7 +1,8 @@
 {
   "skills": {
+    "react-native": ["native"],
     "react": ["react", "reactjs", "react.js"],
-    "javascript": ["javascript", "js", "ecmascript"],
+    "javascript": ["javascript", "js", "ecmascript", "es6"],
     "typescript": ["typescript", "ts"],
     "nextjs": ["nextjs", "next.js", "next js"],
     "vue": ["vue", "vuejs", "vue.js"],
@@ -13,7 +14,10 @@
     "webpack": ["webpack", "bundler"],
     "git": ["git", "version control"],
     "aws": ["aws", "amazon web services"],
-    "docker": ["docker", "containerization"]
+    "docker": ["docker", "containerization"],
+    "python": ["python", "python programming language"],
+    "react-native": ["react native", "react-native", "native"],
+    "python": ["python", "py"]
   },
   "jobFunctions": {
     "frontend": ["frontend", "front-end", "front end", "ui", "user interface"],
