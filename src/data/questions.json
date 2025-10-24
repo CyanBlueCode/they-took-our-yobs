@@ -1,5 +1,10 @@
 [
   {
+    "id": "phone",
+    "question": "Phone",
+    "answerType": "string"
+  },
+  {
     "id": "education-level",
     "question": "Have you completed the following level of education:",
     "answerType": "boolean"

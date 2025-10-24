@@ -57,6 +57,13 @@ project-root/
 ├─ package.json
 └─ README.md
 ```
+# Current Structure
+* src/scripts/run.js - Main entry point
+* src/utils/navigation.js - Job navigation logic
+* src/handlers/applicationHandler.js - Form filling logic
+* src/utils/logger.js - Logging functionality
+* src/data/*.json - Configuration and answer data
+* src/scripts/save-auth.js - Authentication helper
 
 ---
 
@@ -164,22 +171,31 @@ Have you completed the following level of education: [Degree]?
 How many years of [Job_Function] experience do you currently have?
 Are you willing to undergo a background check, in accordance with local law/regulations?
 > yes
+
 Do you have a valid driver's license?
 > yes
+
 Are you willing to take a drug test, in accordance with local law/regulations?
 > yes
+
 Are you comfortable commuting to this job's location?
 > no
+
 Are you comfortable working in an onsite setting?
 > no
+
 Are you comfortable working in a hybrid setting?
 > yes
+
 Are you comfortable working in a remote setting?
 > yes
+
 We must fill this position urgently. Can you start immediately?
 > yes
+
 Will you now, or in the future, require sponsorship for employment visa status (e.g. H-1B visa status)?
 > no
+
 Are you legally authorized to work in the United States?
 > yes
 

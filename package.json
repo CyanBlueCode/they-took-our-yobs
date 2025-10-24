@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "auth": "node src/scripts/save-auth.js",
-    "start": "nodemon --watch src --exec node src/scripts/run.js",
-    "dev": "npm run auth && npm run start"
+    "startW": "nodemon --watch src --exec node src/scripts/run.js",
+    "start": "node src/scripts/run.js",
+    "dev": "npm run auth && npm run startW"
   },
   "repository": {
     "type": "git",

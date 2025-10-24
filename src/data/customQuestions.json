@@ -1,0 +1,18 @@
+[
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4317464986&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "How many years of work experience do you have with TypeScript?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-10-24T05:33:59.874Z"
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4317464986&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "Are you willing to participate in a coding challenge to showcase your skills?Are you willing to participate in a coding challenge to showcase your skills?",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-10-24T05:33:59.888Z"
+  }
+]

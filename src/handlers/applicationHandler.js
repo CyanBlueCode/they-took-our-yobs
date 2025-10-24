@@ -26,9 +26,19 @@ export async function processEasyApplyModal(page, applicationData) {
       const submitBtn = await page.$('button[data-live-test-easy-apply-submit-button]');
 
       if (submitBtn) {
+        // Uncheck follow company checkbox on last page
+        await uncheckFollowCompany(page);
         console.log('Submit button found - submitting application');
         await submitBtn.click();
         await page.waitForTimeout(2000);
+        
+        // Close success modal
+        const successModalClose = await page.$('button[data-test-modal-close-btn]');
+        if (successModalClose) {
+          console.log('Closing success modal');
+          await successModalClose.click();
+          await page.waitForTimeout(1000);
+        }
         break;
       } else if (nextBtn) {
         console.log('Next button found - proceeding to next step');
@@ -41,15 +51,14 @@ export async function processEasyApplyModal(page, applicationData) {
         await page.waitForTimeout(1500);
       } else {
         console.log('No next/submit button found - ending modal process');
-         page.waitForTimeout(100000000);
         break;
       }
     }
   } catch (error) {
     if (error.message === 'VALIDATION_ERROR') {
       await handleValidationError(page);
+      // page.waitForTimeout(100000000);
     }
-    page.waitForTimeout(100000000);
     throw error;
   }
 }
@@ -58,7 +67,7 @@ export async function processEasyApplyModal(page, applicationData) {
 // NOTE for jobId's, we might want to keep them in a separate key altogether
 // step 2.1. create a new alt flow that allows us to run through applicationHandler.js flow again, but for a
 // specific list of jobId's only
-// TODO error handling
+// TODO error handling - not logging job id correctly
 async function handleValidationError(page) {
   try {
     const jobId = await getJobId(page);
@@ -100,7 +109,12 @@ async function uncheckFollowCompany(page) {
     const isChecked = await followCheckbox.isChecked();
     if (isChecked) {
       console.log('Unchecking follow company checkbox');
-      await followCheckbox.uncheck();
+      const label = await page.$('label[for="follow-company-checkbox"]');
+      if (label) {
+        await label.click();
+      } else {
+        await followCheckbox.uncheck();
+      }
     }
   }
 }
@@ -117,6 +131,12 @@ async function fillFormFields(page, applicationData) {
   for (const dropdown of dropdowns) {
     await fillDropdown(page, dropdown, applicationData);
   }
+
+  // Fill radio buttons
+  await fillRadioButtons(page, applicationData);
+  
+  // Fill custom questions
+  await fillCustomQuestions(page, applicationData);
   
   // Check for validation errors
   const errorElements = await page.$$('.artdeco-inline-feedback--error');
@@ -140,6 +160,15 @@ async function fillTextInput(page, input, applicationData) {
     console.log(`Filling text input "${label}" with: ${fillValue}`);
     await input.fill(fillValue);
     await page.waitForTimeout(500);
+  } else {
+    console.log(`No answer found for text input "${label}"`);
+    // Log as custom question if it looks like a question
+    if (label.includes('?') || label.toLowerCase().includes('years') || label.toLowerCase().includes('experience')) {
+      const jobId = await getJobId(page);
+      const url = page.url();
+      const answerType = label.toLowerCase().includes('years') ? 'number' : 'text';
+      logCustomQuestion({ jobId, url }, label, answerType);
+    }
   }
 }
 
@@ -178,6 +207,63 @@ async function fillDropdown(page, dropdown, applicationData) {
     }
   } else {
     console.log(`No answer found for dropdown "${label}"`);
+    // Log as custom question if it looks like a question
+    if (label.includes('?')) {
+      const jobId = await getJobId(page);
+      const url = page.url();
+      logCustomQuestion({ jobId, url }, label, 'boolean');
+    }
+  }
+}
+
+async function fillRadioButtons(page, applicationData) {
+  console.log('DEBUG: Starting radio button fill');
+  const fieldsets = await page.$$('fieldset[data-test-form-builder-radio-button-form-component="true"]');
+  console.log(`DEBUG: Found ${fieldsets.length} fieldsets`);
+  
+  for (const fieldset of fieldsets) {
+    const legend = await fieldset.$('legend span');
+    if (!legend) {
+      console.log('DEBUG: No legend span found');
+      continue;
+    }
+    
+    const questionText = await legend.textContent();
+    console.log(`DEBUG: Question: "${questionText.trim()}"`);
+    const answer = getAnswerForLabel(questionText, applicationData);
+    console.log(`DEBUG: Answer: ${answer} (${typeof answer})`);
+    
+    if (typeof answer === 'boolean') {
+      const targetValue = answer ? 'Yes' : 'No';
+      console.log(`DEBUG: Looking for: ${targetValue}`);
+      
+      try {
+        const radioButton = await fieldset.$(`input[type="radio"][value="${targetValue}"]`);
+        if (radioButton) {
+          console.log('DEBUG: Radio button found, trying label click...');
+          const radioId = await radioButton.getAttribute('id');
+          const label = await fieldset.$(`label[for="${radioId}"]`);
+          if (label) {
+            await Promise.race([
+              label.click(),
+              page.waitForTimeout(2000)
+            ]);
+            console.log(`Selected radio button with: ${targetValue}`);
+          } else {
+            console.log('DEBUG: Label not found, trying direct click');
+            await Promise.race([
+              radioButton.click(),
+              page.waitForTimeout(2000)
+            ]);
+          }
+          await page.waitForTimeout(300);
+        } else {
+          console.log('DEBUG: Radio button not found');
+        }
+      } catch (error) {
+        console.log(`DEBUG: Error: ${error.message}`);
+      }
+    }
   }
 }
 
@@ -207,6 +293,84 @@ async function getDropdownLabel(page, dropdown) {
 import questions from '../data/questions.json' with { type: 'json' };
 import keywords from '../data/keywords.json' with { type: 'json' };
 import answers from '../data/answers.json' with { type: 'json' };
+import customQuestions from '../data/customQuestions.json' with { type: 'json' };
+import { logCustomQuestion } from '../utils/logger.js';
+
+async function fillCustomQuestions(page, applicationData) {
+  // Handle dropdowns that might be custom questions
+  const customDropdowns = await page.$$('select:not(.fb-dash-form-element__select-dropdown)');
+  for (const dropdown of customDropdowns) {
+    await fillCustomDropdown(page, dropdown, applicationData);
+  }
+  
+  // Handle number inputs that might be custom questions
+  const numberInputs = await page.$$('input[type="number"]:not(.artdeco-text-input--input)');
+  for (const input of numberInputs) {
+    await fillCustomNumberInput(page, input, applicationData);
+  }
+}
+
+async function fillCustomDropdown(page, dropdown, applicationData) {
+  const selectedValue = await dropdown.inputValue();
+  if (selectedValue && selectedValue !== 'Select an option') {
+    return;
+  }
+
+  const label = await getDropdownLabel(page, dropdown);
+  if (!label) return;
+  
+  const answer = getCustomAnswer(label);
+  
+  if (answer !== null) {
+    const options = await dropdown.$$('option');
+    for (const option of options) {
+      const optionText = await option.textContent();
+      const optionValue = await option.getAttribute('value');
+      
+      if (optionText?.toLowerCase().includes(answer.toLowerCase()) || 
+          optionValue?.toLowerCase().includes(answer.toLowerCase())) {
+        console.log(`Selecting custom dropdown "${label}" option: ${optionText}`);
+        await dropdown.selectOption(optionValue);
+        await page.waitForTimeout(500);
+        break;
+      }
+    }
+  } else {
+    // Log as custom question
+    const jobId = await getJobId(page);
+    const url = page.url();
+    logCustomQuestion({ jobId, url }, label, 'boolean');
+  }
+}
+
+async function fillCustomNumberInput(page, input, applicationData) {
+  const value = await input.inputValue();
+  if (value) return;
+
+  const label = await getInputLabel(page, input);
+  if (!label) return;
+  
+  const answer = getCustomAnswer(label);
+  
+  if (answer !== null) {
+    console.log(`Filling custom number input "${label}" with: ${answer}`);
+    await input.fill(answer.toString());
+    await page.waitForTimeout(500);
+  } else {
+    // Log as custom question
+    const jobId = await getJobId(page);
+    const url = page.url();
+    logCustomQuestion({ jobId, url }, label, 'number');
+  }
+}
+
+function getCustomAnswer(questionText) {
+  const cleanQuestion = questionText.replace(/\s+/g, ' ').trim();
+  
+  // Check custom questions for exact match
+  const customQuestion = customQuestions.find(q => q.question === cleanQuestion);
+  return customQuestion ? customQuestion.answer : null;
+}
 
 function getAnswerForLabel(label, applicationData) {
   if (!label) return null;
@@ -227,7 +391,7 @@ function getAnswerForLabel(label, applicationData) {
 
   // Work authorization
   if (lowerLabel.includes('legally authorized to work')) {
-    return answers.boolean['work-authorization'] ? 'Yes' : 'No';
+    return answers.boolean['work-authorization'];
   }
 
   // Relocation/states
@@ -257,7 +421,7 @@ function getAnswerForLabel(label, applicationData) {
 function getAnswerById(questionId, label) {
   // Check for direct answer in answers.json
   if (answers.boolean && answers.boolean[questionId] !== undefined) {
-    return answers.boolean[questionId] ? 'Yes' : 'No';
+    return answers.boolean[questionId];
   }
   
   // Handle specific cases
