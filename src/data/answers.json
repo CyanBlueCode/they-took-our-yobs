@@ -38,7 +38,8 @@
     "web-development": 10,
     "software-development": 10,
     "ui-development": 8,
-    "javascript-development": 10
+    "javascript-development": 10,
+    "leadership": 5
   },
   "industry": {
     "technology": 10,
@@ -54,8 +55,6 @@
     "phd": false,
     "associates": true
   },
-  "linkedinProfile": "https://linkedin.com/in/johndoe",
-  "website": "https://johndoe.dev",
   "location": "CA California",
-  "phone": "+13236730389"
+  "phone": "3236730389"
 }

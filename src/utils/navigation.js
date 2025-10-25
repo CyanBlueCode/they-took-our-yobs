@@ -47,6 +47,14 @@ export async function processJobListings(page, applicationData) {
     await card.click();
     await page.waitForTimeout(2000); // let right-hand panel render
 
+    // Check if any modal is already open before trying Easy Apply
+    const existingModal = await page.$('.artdeco-modal');
+    if (existingModal) {
+      console.log(`Modal already open for job #${i + 1}, closing first`);
+      await closeModal(page);
+      await page.waitForTimeout(1000);
+    }
+
     // selector for Easy Apply or Continue
     const easyApplyButton = await page.$('button:has(span:has-text("Easy Apply"))');
     const continueButton = await page.$('button:has(span:has-text("Continue"))');
@@ -58,6 +66,26 @@ export async function processJobListings(page, applicationData) {
       const button = easyApplyButton || continueButton;
       await button.click();
       await page.waitForTimeout(2000);
+
+      // Check for safety reminder modal with more specific selector
+      const safetyHeader = await page.$('h2:has-text("Job search safety reminder")');
+      if (safetyHeader) {
+        console.log(`Safety reminder modal detected for job #${i + 1} - skipping potentially fraudulent job`);
+        
+        try {
+          // Close the safety modal using the dismiss button
+          const modalDismiss = await page.$('button.artdeco-modal__dismiss');
+          if (modalDismiss) {
+            await modalDismiss.click();
+            await page.waitForTimeout(1000);
+            console.log(`Safety modal closed for job #${i + 1}`);
+          }
+        } catch (error) {
+          console.log(`Error closing safety modal: ${error.message}`);
+        }
+        
+        continue; // Skip to next job without dismissing
+      }
 
       try {
         await processEasyApplyModal(page, applicationData);

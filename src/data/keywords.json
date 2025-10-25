@@ -1,6 +1,6 @@
 {
   "skills": {
-    "react-native": ["native"],
+    "react-native": ["react native", "react-native", "native"],
     "react": ["react", "reactjs", "react.js"],
     "javascript": ["javascript", "js", "ecmascript", "es6"],
     "typescript": ["typescript", "ts"],
@@ -15,16 +15,15 @@
     "git": ["git", "version control"],
     "aws": ["aws", "amazon web services"],
     "docker": ["docker", "containerization"],
-    "python": ["python", "python programming language"],
-    "react-native": ["react native", "react-native", "native"],
-    "python": ["python", "py"]
+    "python": ["python", "python programming language", "python", "py"]
   },
   "jobFunctions": {
     "frontend": ["frontend", "front-end", "front end", "ui", "user interface"],
     "web-development": ["web development", "web dev", "web developer"],
     "software-development": ["software development", "software dev", "programming"],
     "ui-development": ["ui development", "ui dev", "interface development"],
-    "javascript-development": ["javascript development", "js development"]
+    "javascript-development": ["javascript development", "js development"],
+    "leadership": ["leadership", "management", "team lead", "lead"]
   },
   "industries": {
     "technology": ["technology", "tech", "it"],

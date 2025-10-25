@@ -7,7 +7,7 @@ export async function processEasyApplyModal(page, applicationData) {
   // TODO figure FIRST how to timeout/pause the Playwright browser window on validation error for dev; alt,
   // you can just comment out the auto-advance flow during dev (navigation.js)
   // ANCHOR step 1. make default questions work properly
-  // TODO implement page.waitForTimeout(2000) to pause the app on error instead of using ctrl+c to quit out
+  // TODO implement page.waitForTimeout(3000) to pause the app on error instead of using ctrl+c to quit out
   try {
     while (currentStep < maxSteps) {
       console.log(`Processing modal step ${currentStep + 1}`);
@@ -30,7 +30,7 @@ export async function processEasyApplyModal(page, applicationData) {
         await uncheckFollowCompany(page);
         console.log('Submit button found - submitting application');
         await submitBtn.click();
-        await page.waitForTimeout(2000);
+        await page.waitForTimeout(3000);
         
         // Close success modal
         const successModalClose = await page.$('button[data-test-modal-close-btn]');
@@ -43,7 +43,7 @@ export async function processEasyApplyModal(page, applicationData) {
       } else if (nextBtn) {
         console.log('Next button found - proceeding to next step');
         await nextBtn.click();
-        await page.waitForTimeout(2000);
+        await page.waitForTimeout(3000);
         currentStep++;
       } else if (reviewBtn) {
         console.log('Review button found - proceeding to submit');
@@ -93,14 +93,6 @@ async function handleValidationError(page) {
   } catch (error) {
     console.log('Error in validation error handler, continuing...');
   }
-}
-
-async function getJobId(page) {
-  const jobCard = await page.$('li[data-occludable-job-id].jobs-search-results__list-item--active');
-  if (jobCard) {
-    return await jobCard.getAttribute('data-occludable-job-id');
-  }
-  return 'unknown';
 }
 
 async function uncheckFollowCompany(page) {
@@ -170,10 +162,9 @@ async function fillTextInput(page, input, applicationData) {
     console.log(`No answer found for text input "${label}"`);
     // Log as custom question if it looks like a question
     if (label.includes('?') || label.toLowerCase().includes('years') || label.toLowerCase().includes('experience')) {
-      const jobId = await getJobId(page);
       const url = page.url();
       const answerType = label.toLowerCase().includes('years') ? 'number' : 'text';
-      logCustomQuestion({ jobId, url }, label, answerType);
+      logCustomQuestion(url, label, answerType);
     }
   }
 }
@@ -237,7 +228,6 @@ async function fillDropdown(page, dropdown, applicationData) {
     console.log(`No answer found for dropdown "${label}"`);
     // Log as custom question if it looks like a question
     if (label.includes('?')) {
-      const jobId = await getJobId(page);
       const url = page.url();
       
       // Get dropdown options for logging
@@ -251,7 +241,7 @@ async function fillDropdown(page, dropdown, applicationData) {
         }
       }
       
-      logCustomQuestion({ jobId, url }, label, 'boolean', optionTexts);
+      logCustomQuestion(url, label, 'dropdown', optionTexts);
     }
   }
 }
@@ -286,14 +276,14 @@ async function fillRadioButtons(page, applicationData) {
           if (label) {
             await Promise.race([
               label.click(),
-              page.waitForTimeout(2000)
+              page.waitForTimeout(3000)
             ]);
             console.log(`Selected radio button with: ${targetValue}`);
           } else {
             console.log('DEBUG: Label not found, trying direct click');
             await Promise.race([
               radioButton.click(),
-              page.waitForTimeout(2000)
+              page.waitForTimeout(3000)
             ]);
           }
           await page.waitForTimeout(300);
@@ -312,7 +302,8 @@ async function getInputLabel(page, input) {
   if (inputId) {
     const label = await page.$(`label[for="${inputId}"]`);
     if (label) {
-      return await label.textContent();
+      const text = await label.textContent();
+      return text.replace(/\s+/g, ' ').trim();
     }
   }
   return '';
@@ -324,7 +315,27 @@ async function getDropdownLabel(page, dropdown) {
     const label = await page.$(`label[for="${dropdownId}"]`);
     if (label) {
       const text = await label.textContent();
-      return text.replace(/\s+/g, ' ').trim();
+      const cleanText = text.replace(/\s+/g, ' ').trim();
+      
+      // Check for pattern like "text? text?" or "text text"
+      const regex = /^(.+?)\?\s*\1\?*$/;
+      const match = cleanText.match(regex);
+      if (match) {
+        return match[1].trim() + '?';
+      }
+      
+      // Fallback: check if first half equals second half
+      const words = cleanText.split(' ');
+      if (words.length > 2 && words.length % 2 === 0) {
+        const halfLength = words.length / 2;
+        const firstHalf = words.slice(0, halfLength).join(' ');
+        const secondHalf = words.slice(halfLength).join(' ');
+        if (firstHalf === secondHalf) {
+          return firstHalf;
+        }
+      }
+      
+      return cleanText;
     }
   }
   return '';
@@ -377,9 +388,20 @@ async function fillCustomDropdown(page, dropdown, applicationData) {
     }
   } else {
     // Log as custom question
-    const jobId = await getJobId(page);
     const url = page.url();
-    logCustomQuestion({ jobId, url }, label, 'boolean');
+    
+    // Get dropdown options for logging
+    const options = await dropdown.$$('option');
+    const optionTexts = [];
+    for (const option of options) {
+      const optionText = await option.textContent();
+      const optionValue = await option.getAttribute('value');
+      if (optionText && optionText !== 'Select an option') {
+        optionTexts.push({ text: optionText.trim(), value: optionValue });
+      }
+    }
+    
+    logCustomQuestion(url, label, 'dropdown', optionTexts);
   }
 }
 
@@ -398,17 +420,25 @@ async function fillCustomNumberInput(page, input, applicationData) {
     await page.waitForTimeout(500);
   } else {
     // Log as custom question
-    const jobId = await getJobId(page);
     const url = page.url();
-    logCustomQuestion({ jobId, url }, label, 'number');
+    logCustomQuestion(url, label, 'number');
   }
 }
 
 function getCustomAnswer(questionText) {
   const cleanQuestion = questionText.replace(/\s+/g, ' ').trim();
   
-  // Check custom questions for exact match
-  const customQuestion = customQuestions.find(q => q.question === cleanQuestion);
+  // Check custom questions for exact match first
+  let customQuestion = customQuestions.find(q => q.question === cleanQuestion);
+  
+  // If no exact match, try partial matching
+  if (!customQuestion) {
+    customQuestion = customQuestions.find(q => 
+      q.question.toLowerCase().includes(cleanQuestion.toLowerCase()) ||
+      cleanQuestion.toLowerCase().includes(q.question.toLowerCase())
+    );
+  }
+  
   if (customQuestion && customQuestion.answer !== null) {
     return customQuestion.answer.toString();
   }
@@ -539,15 +569,37 @@ function getAnswerById(questionId, label) {
   return null;
 }
 
+  // Strips spaces & symbols for keyword matching
+function normalizeText(text) {
+  return text.toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
 function findTechKeyword(label) {
   console.log(`DEBUG: Looking for tech in: "${label}"`);
-  for (const [tech, variations] of Object.entries(keywords.skills)) {
+  const normalizedLabel = normalizeText(label);
+  
+  // Sort skills by longest variation first to check more specific matches first
+  const sortedSkills = Object.entries(keywords.skills).sort((a, b) => {
+    const maxLengthA = Math.max(...a[1].map(v => v.length));
+    const maxLengthB = Math.max(...b[1].map(v => v.length));
+    return maxLengthB - maxLengthA;
+  });
+  
+  for (const [tech, variations] of sortedSkills) {
     console.log(`DEBUG: Checking ${tech} with variations: ${variations.join(', ')}`);
-    if (variations.some(variation => label.includes(variation))) {
-      console.log(`DEBUG: Found match: ${tech}`);
-      return tech;
+    
+    // Sort variations by length descending within each tech
+    const sortedVariations = variations.sort((a, b) => b.length - a.length);
+    
+    for (const variation of sortedVariations) {
+      const normalizedVariation = normalizeText(variation);
+      if (normalizedLabel.includes(normalizedVariation)) {
+        console.log(`DEBUG: Found match: ${tech} (${variation} -> ${normalizedVariation})`);
+        return tech;
+      }
     }
   }
+  
   console.log(`DEBUG: No tech match found`);
   return null;
 }

@@ -42,9 +42,339 @@
   {
     "jobId": "unknown",
     "url": "https://www.linkedin.com/jobs/search/?currentJobId=4316809565&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
-    "question": "What is your level of proficiency in English?What is your level of proficiency in English?",
+    "question": "What is your level of proficiency in English?",
     "answerType": "boolean",
     "answer": null,
     "timestamp": "2025-10-24T06:25:56.106Z"
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4318531454&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "How many years of leadership experience do you have?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-10-24T21:10:52.495Z"
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4293288933&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "How many years of work experience do you have with MySQL?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-10-24T21:42:25.665Z"
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4315741709&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "How many eyars of experience with AWS JavaScript SDK (v3+)?",
+    "answerType": "text",
+    "answer": 1,
+    "timestamp": "2025-10-24T21:51:38.806Z"
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4315741709&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "Do you have experience building applications from scratch?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-24T21:51:38.831Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4315741709&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "Do you have hands on experience with Express.js?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-24T21:51:38.843Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4305771372&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "What are the last two numerical digits of Edison's lightbulb patent?",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-24T21:53:18.499Z"
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4305771372&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "Engineering scrums are at 9am EST each day as most of the team is East Coast based. Will you be able to make this time work each day?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-24T21:53:18.524Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4305771372&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "Are you willing to take a 30 to 60 minute live engineering coding challenge as part of the interview process?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-24T21:53:18.537Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4305771372&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "Are you currently using AI tools such as Cursor?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-24T21:53:18.547Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "unknown",
+    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4318577031&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
+    "question": "Do you possess the ability to obtain a security clearance? US Citizenship, clean criminal/credit history is required?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-24T21:53:41.488Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4323934464",
+    "question": "How many years of work experience do you have with Azure AI Foundry?",
+    "answerType": "number",
+    "answer": 0,
+    "timestamp": "2025-10-24T22:01:41.315Z"
+  },
+  {
+    "jobId": "4317724670",
+    "question": "How many years of work experience do you have with Figma (Software)?",
+    "answerType": "number",
+    "answer": 7,
+    "timestamp": "2025-10-24T22:02:25.113Z"
+  },
+  {
+    "jobId": "4317724670",
+    "question": "How many years of work experience do you have with REST APIs?",
+    "answerType": "number",
+    "answer": 13,
+    "timestamp": "2025-10-24T22:02:25.121Z"
+  },
+  {
+    "jobId": "4317724670",
+    "question": "How many years of experience you have in Figma",
+    "answerType": "number",
+    "answer": 7,
+    "timestamp": "2025-10-24T22:02:26.856Z"
+  },
+  {
+    "jobId": "4331143912",
+    "question": "What is your expected hourly pay on W2 basis?",
+    "answerType": "text",
+    "answer": "90",
+    "timestamp": "2025-10-24T22:03:05.638Z"
+  },
+  {
+    "jobId": "4331143912",
+    "question": "Do you need Visa Sponsorship, now or in the future to work on our W2?",
+    "answerType": "dropdown",
+    "answer": "No",
+    "timestamp": "2025-10-24T22:03:06.243Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4315977297",
+    "question": "Have you led or managed a development team before?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-25T02:32:41.951Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318164142",
+    "question": "What is your desired annual salary range for this role?",
+    "answerType": "text",
+    "answer": "$166,400-$187,200",
+    "timestamp": "2025-10-25T02:38:51.586Z"
+  },
+  {
+    "jobId": "4318164142",
+    "question": "Which country are you based out of?",
+    "answerType": "dropdown",
+    "answer": "United States",
+    "timestamp": "2025-10-25T02:38:51.629Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "United States",
+        "value": "United States"
+      },
+      {
+        "text": "Canada",
+        "value": "Canada"
+      },
+      {
+        "text": "Ireland",
+        "value": "Ireland"
+      },
+      {
+        "text": "United Kingdom",
+        "value": "United Kingdom"
+      },
+      {
+        "text": "Australia",
+        "value": "Australia"
+      },
+      {
+        "text": "Poland",
+        "value": "Poland"
+      },
+      {
+        "text": "Bulgaria",
+        "value": "Bulgaria"
+      },
+      {
+        "text": "Czechia",
+        "value": "Czechia"
+      },
+      {
+        "text": "Ukraine",
+        "value": "Ukraine"
+      },
+      {
+        "text": "Hungary",
+        "value": "Hungary"
+      },
+      {
+        "text": "Phillippines",
+        "value": "Phillippines"
+      },
+      {
+        "text": "I live somewhere other than the options listed above",
+        "value": "I live somewhere other than the options listed above"
+      }
+    ]
+  },
+  {
+    "jobId": "4292487408",
+    "question": "Do you live within 100 miles of the San Francisco Bay Area?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-25T02:59:49.709Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
   }
 ]

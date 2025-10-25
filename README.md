@@ -59,10 +59,13 @@ project-root/
 ```
 # Current Structure
 * src/scripts/run.js - Main entry point
-* src/utils/navigation.js - Job navigation logic
-* src/handlers/applicationHandler.js - Form filling logic
-* src/utils/logger.js - Logging functionality
-* src/data/*.json - Configuration and answer data
+* src/utils/navigation.js - Job navigation logic with safety modal detection
+* src/handlers/applicationHandler.js - Form filling logic with custom question support
+* src/utils/logger.js - Logging functionality for custom questions
+* src/data/answers.json - Predefined answers for experience, boolean, and job function questions
+* src/data/keywords.json - Keyword matching for skills, job functions, industries, degrees
+* src/data/questions.json - Static LinkedIn question patterns
+* src/data/customQuestions.json - Logged custom questions with answers and dropdown options
 * src/scripts/save-auth.js - Authentication helper
 
 ---
@@ -90,40 +93,56 @@ project-root/
 ### 4. **Form Filling**
 
 * **Input types supported:**
-
-  * Text inputs (`input[type="text"]`)
+  * Text inputs (`input.artdeco-text-input--input`)
   * Dropdown selects (`select`)
-  * Checkboxes (specific first-page checkbox)
-  * Other field types TBD
+  * Radio buttons (`fieldset[data-test-form-builder-radio-button-form-component]`)
+  * Follow company checkbox (auto-unchecked)
+
 * **Prefilled detection:**
-
   * Skip if input has value or dropdown selection isn't blank.
-* **Answer mapping:**
 
-  * `applicationHandler.js` maps label → keyword → JSON value.
-  * Uses substring matching for tech names, durations, and other common categories.
-  * Custom questions logged for manual completion.
+* **Answer mapping priority:**
+  1. Custom questions (exact/partial match from customQuestions.json)
+  2. Direct application data (phone, email, name)
+  3. Work authorization and location questions
+  4. Questions.json pattern matching
+  5. Tech keyword matching with normalization
+
+* **Custom question handling:**
+  * Unknown questions logged to customQuestions.json with dropdown options
+  * Supports text, number, dropdown, and boolean answer types
+  * Manual answers can be added to customQuestions.json for reuse
+
+* **Keyword matching:**
+  * Normalized text matching (strips spaces/symbols)
+  * Prioritizes longer/more specific matches
+  * Supports skills, job functions, industries, and degrees
+
 * **Navigation buttons:**
-
   * Detect `Next` or `Submit` dynamically.
 
 ### 5. **Data Flow**
 
 * `questions.json` → static question templates (predefined LinkedIn chips).
-* `keywords.json` → partial-match lists for dumber JS matching.
-* `application.json` → maps questions + keyword → answer type + placeholder.
-* `answers.json` → actual answer values.
-* Handlers fetch answers dynamically, fill fields, log failures.
+* `keywords.json` → partial-match lists for skills, job functions, industries, degrees.
+* `answers.json` → actual answer values for experience, boolean, and job function questions.
+* `customQuestions.json` → logged unknown questions with manual answers and dropdown options.
+* Handlers fetch answers dynamically, fill fields, log unknown questions for manual completion.
 
 ### 6. **Logging & Error Handling**
 
-* All failures: JobId + URL + timestamp stored in logger for rerun.
-* Any unexpected field triggers discard modal, logs job, and continues on to next job listing/application.
+* **Custom question logging:** Unknown questions logged with jobId, question text, answer type, dropdown options, and timestamp
+* **Safety modal detection:** Jobs flagged by LinkedIn safety warnings are automatically skipped
+* **Modal state management:** Existing modals closed before attempting Easy Apply
+* **Validation errors:** Applications with missing required fields are saved as drafts
+* **Duplicate prevention:** Questions are deduplicated in logging to prevent repeated entries
 
-### 7. **Timing & Anti-Bot**
+### 7. **Safety & Risk Management**
 
-* Small randomized delays for clicks/fills to simulate human behavior.
-* Adjustable polling/retry per hour to reduce detection risk.
+* **LinkedIn safety modal detection:** Automatically skips jobs flagged with safety warnings
+* **Modal state management:** Closes existing modals before attempting Easy Apply
+* **Anti-bot timing:** Small randomized delays for clicks/fills to simulate human behavior
+* **Rate limiting:** Adjustable polling/retry per hour to reduce detection risk
 
 ### 8. **Development Notes**
 
@@ -134,13 +153,13 @@ project-root/
 
 # **Key Takeaways**
 
-* **Minimal viable automation:** fill only known fields, skip prefilled, discard/submit appropriately.
-* **Data-driven:** JSON structure controls what is filled, easy to extend.
-* **Robust error handling:** logs everything for manual follow-up.
-* **Temporary & flexible:** persistent login + hot reload avoids repeated auth headaches.
-* **KISS principle:** simple substring matching for keywords, not ML or LLM-based.
-* **Limited LinkedIn questions:** there are only 20 pre-set questions the job poster can set when posting a job, by clicking on Screening Questions categorical chips in the job posting process + 1 custom question which only; some of the defined .
-*/
+* **Adaptive automation:** Handles both predefined LinkedIn questions and custom employer questions
+* **Data-driven approach:** JSON structure controls what is filled, easily extensible
+* **Smart keyword matching:** Normalized text matching with priority for specific matches
+* **Custom question learning:** Unknown questions are logged with context for manual completion
+* **Safety-first:** Automatically avoids potentially fraudulent job listings
+* **Robust error handling:** Comprehensive logging for manual follow-up and debugging
+* **Development-friendly:** Hot reload and persistent login for efficient iteration
 
 # **Setup**
 1. `npx playwright install`
@@ -201,6 +220,7 @@ Are you legally authorized to work in the United States?
 
 # Number
 How many years of work experience do you have with [Skill/Tech]?
+
 How many years of [Industry] experience do you currently have?
 
 # Boolean/Number
@@ -208,5 +228,9 @@ How many years of [Industry] experience do you currently have?
 
 # Skip
 What is your level of proficiency in [Language]?
+
 What is your university grade point average (4.0 GPA Scale)?
+
 Do you have the following license or certification: [License/Certification]?
+
+---
