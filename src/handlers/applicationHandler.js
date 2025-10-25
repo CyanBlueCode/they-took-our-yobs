@@ -1,13 +1,10 @@
-
+import config from '../data/config.json' with { type: 'json' };
+import { randomWait } from '../utils/timing.js';
 
 export async function processEasyApplyModal(page, applicationData) {
   const maxSteps = 12;
   let currentStep = 0;
 
-  // TODO figure FIRST how to timeout/pause the Playwright browser window on validation error for dev; alt,
-  // you can just comment out the auto-advance flow during dev (navigation.js)
-  // ANCHOR step 1. make default questions work properly
-  // TODO implement page.waitForTimeout(2000) to pause the app on error instead of using ctrl+c to quit out
   try {
     while (currentStep < maxSteps) {
       console.log(`Processing modal step ${currentStep + 1}`);
@@ -30,25 +27,25 @@ export async function processEasyApplyModal(page, applicationData) {
         await uncheckFollowCompany(page);
         console.log('Submit button found - submitting application');
         await submitBtn.click();
-        await page.waitForTimeout(2000);
+        await randomWait(page);
         
         // Close success modal
         const successModalClose = await page.$('button[data-test-modal-close-btn]');
         if (successModalClose) {
           console.log('Closing success modal');
           await successModalClose.click();
-          await page.waitForTimeout(1000);
+          await randomWait(page);
         }
         break;
       } else if (nextBtn) {
         console.log('Next button found - proceeding to next step');
         await nextBtn.click();
-        await page.waitForTimeout(2000);
+        await randomWait(page);
         currentStep++;
       } else if (reviewBtn) {
         console.log('Review button found - proceeding to submit');
         await reviewBtn.click();
-        await page.waitForTimeout(1500);
+        await randomWait(page);
       } else {
         console.log('No next/submit button found - ending modal process');
         break;
@@ -57,18 +54,10 @@ export async function processEasyApplyModal(page, applicationData) {
   } catch (error) {
     if (error.message === 'VALIDATION_ERROR') {
       await handleValidationError(page);
-      // page.waitForTimeout(100000000);
     }
     throw error;
   }
 }
-
-// ANCHOR step 2. make sure on validation fail, we log questions for manual answering at EOD
-// NOTE for jobId's, we might want to keep them in a separate key altogether
-// step 2.1. create a new alt flow that allows us to run through applicationHandler.js flow again, but for a
-// specific list of jobId's only
-// TODO error handling - not logging job id correctly
-import config from '../data/config.json' with { type: 'json' };
 
 async function handleValidationError(page) {
   try {
@@ -129,19 +118,19 @@ async function handleValidationError(page) {
     }
     
     console.log('Closing modal and saving application...');
-    await page.waitForTimeout(2000);
+    await randomWait(page);
     
     // Close modal and save
     const closeBtn = await page.$('button.artdeco-modal__dismiss');
     if (closeBtn) {
       await closeBtn.click();
-      await page.waitForTimeout(1000);
+      await randomWait(page);
       
       const saveBtn = await page.$('button:has-text("Save")');
       if (saveBtn) {
         console.log('Saving application due to validation error');
         await saveBtn.click();
-        await page.waitForTimeout(1000);
+        await randomWait(page);
       }
     }
   } catch (error) {
@@ -211,7 +200,7 @@ async function fillTextInput(page, input, applicationData) {
     const stringValue = fillValue.toString();
     console.log(`Filling text input "${label}" with: ${stringValue}`);
     await input.fill(stringValue);
-    await page.waitForTimeout(500);
+    await randomWait(page);
   } else {
     console.log(`No answer found for text input "${label}"`);
     // Log as custom question if it looks like a question
@@ -277,6 +266,24 @@ async function fillDropdown(page, dropdown, applicationData) {
     
     if (!found) {
       console.log(`No matching option found for "${fillValue}" in dropdown "${label}"`);
+      
+      // Log as custom question if no match found and it looks like a question
+      if (label.includes('?')) {
+        const url = page.url();
+        
+        // Get dropdown options for logging
+        const options = await dropdown.$$('option');
+        const optionTexts = [];
+        for (const option of options) {
+          const optionText = await option.textContent();
+          const optionValue = await option.getAttribute('value');
+          if (optionText && optionText !== 'Select an option') {
+            optionTexts.push({ text: optionText.trim(), value: optionValue });
+          }
+        }
+        
+        logCustomQuestion(url, label, 'dropdown', optionTexts);
+      }
     }
   } else {
     console.log(`No answer found for dropdown "${label}"`);
@@ -436,7 +443,7 @@ async function fillCustomDropdown(page, dropdown, applicationData) {
           optionValue?.toLowerCase().includes(answer.toLowerCase())) {
         console.log(`Selecting custom dropdown "${label}" option: ${optionText}`);
         await dropdown.selectOption(optionValue);
-        await page.waitForTimeout(500);
+        await randomWait(page);
         break;
       }
     }
@@ -529,9 +536,9 @@ function getAnswerForLabel(label, applicationData) {
     return answers.boolean['work-authorization'];
   }
 
-  // Relocation/states
+  // Relocation/states (more specific matching)
   console.log(`DEBUG: Checking relocation`);
-  if (lowerLabel.includes('relocating') || lowerLabel.includes('reside')) {
+  if (lowerLabel.includes('relocating') || (lowerLabel.includes('reside') && lowerLabel.includes('state'))) {
     console.log(`DEBUG: Found relocation match`);
     return answers.location || null;
   }

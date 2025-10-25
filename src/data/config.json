@@ -1,5 +1,9 @@
 {
   "developmentMode": true,
   "pauseOnValidationError": true,
-  "pauseDurationSeconds": 10
+  "pauseDurationSeconds": 10,
+  "randomTimeout": {
+    "minMs": 1000,
+    "maxMs": 3000
+  }
 }

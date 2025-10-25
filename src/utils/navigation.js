@@ -20,7 +20,7 @@ export async function loadAllJobCards(page, maxScrolls = 20) {
       el.scrollTo({ top: el.scrollHeight, behavior: 'smooth' });
     });
 
-    await page.waitForTimeout(2000); // wait for lazy-load
+    await randomWait(page); // wait for lazy-load
   }
 
   console.log(`Final job cards loaded: ${prevCount}`);
@@ -28,6 +28,7 @@ export async function loadAllJobCards(page, maxScrolls = 20) {
 }
 
 import { processEasyApplyModal } from '../handlers/applicationHandler.js';
+import { randomWait } from './timing.js';
 
 export async function processJobListings(page, applicationData) {
   // Grab fresh job cards each loop iteration to avoid stale element handles
@@ -45,14 +46,14 @@ export async function processJobListings(page, applicationData) {
 
     await card.scrollIntoViewIfNeeded();
     await card.click();
-    await page.waitForTimeout(2000); // let right-hand panel render
+    await randomWait(page); // let right-hand panel render
 
     // Check if any modal is already open before trying Easy Apply
     const existingModal = await page.$('.artdeco-modal');
     if (existingModal) {
       console.log(`Modal already open for job #${i + 1}, closing first`);
       await closeModal(page);
-      await page.waitForTimeout(1000);
+      await randomWait(page);
     }
 
     // selector for Easy Apply or Continue
@@ -65,7 +66,7 @@ export async function processJobListings(page, applicationData) {
       
       const button = easyApplyButton || continueButton;
       await button.click();
-      await page.waitForTimeout(2000);
+      await randomWait(page);
 
       // Check for safety reminder modal with more specific selector
       const safetyHeader = await page.$('h2:has-text("Job search safety reminder")');
@@ -77,7 +78,7 @@ export async function processJobListings(page, applicationData) {
           const modalDismiss = await page.$('button.artdeco-modal__dismiss');
           if (modalDismiss) {
             await modalDismiss.click();
-            await page.waitForTimeout(1000);
+            await randomWait(page);
             console.log(`Safety modal closed for job #${i + 1}`);
           }
         } catch (error) {
@@ -103,7 +104,7 @@ export async function processJobListings(page, applicationData) {
   if (nextButton) {
     console.log('Next page available → clicking.');
     await nextButton.click();
-    await page.waitForTimeout(3000); // let page refresh
+    await randomWait(page); // let page refresh
   } else {
     console.log('No more pages.');
   }
@@ -114,13 +115,13 @@ async function closeModal(page) {
     const closeBtn = await page.$('button.artdeco-modal__dismiss');
     if (closeBtn) {
       await closeBtn.click();
-      await page.waitForTimeout(2000);
+      await randomWait(page);
 
       const discardBtn = await page.$('button:has-text("Discard")');
       if (discardBtn) {
         console.log('Discard prompt detected → discarding.');
         await discardBtn.click();
-        await page.waitForTimeout(1000);
+        await randomWait(page);
       }
     }
   } catch (error) {

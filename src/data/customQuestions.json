@@ -36,23 +36,15 @@
     "url": "https://www.linkedin.com/jobs/search/?currentJobId=4311471398&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
     "question": "How many years of work experience do you have with React Native?",
     "answerType": "number",
-    "answer": null,
+    "answer": 0,
     "timestamp": "2025-10-24T06:22:36.829Z"
-  },
-  {
-    "jobId": "unknown",
-    "url": "https://www.linkedin.com/jobs/search/?currentJobId=4316809565&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
-    "question": "What is your level of proficiency in English?",
-    "answerType": "boolean",
-    "answer": null,
-    "timestamp": "2025-10-24T06:25:56.106Z"
   },
   {
     "jobId": "unknown",
     "url": "https://www.linkedin.com/jobs/search/?currentJobId=4318531454&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
     "question": "How many years of leadership experience do you have?",
     "answerType": "number",
-    "answer": null,
+    "answer": 7,
     "timestamp": "2025-10-24T21:10:52.495Z"
   },
   {
@@ -60,7 +52,7 @@
     "url": "https://www.linkedin.com/jobs/search/?currentJobId=4293288933&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
     "question": "How many years of work experience do you have with MySQL?",
     "answerType": "number",
-    "answer": null,
+    "answer": 1,
     "timestamp": "2025-10-24T21:42:25.665Z"
   },
   {
@@ -120,7 +112,7 @@
     "url": "https://www.linkedin.com/jobs/search/?currentJobId=4305771372&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
     "question": "What are the last two numerical digits of Edison's lightbulb patent?",
     "answerType": "text",
-    "answer": null,
+    "answer": 98,
     "timestamp": "2025-10-24T21:53:18.499Z"
   },
   {
@@ -128,7 +120,7 @@
     "url": "https://www.linkedin.com/jobs/search/?currentJobId=4305771372&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
     "question": "Engineering scrums are at 9am EST each day as most of the team is East Coast based. Will you be able to make this time work each day?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-24T21:53:18.524Z",
     "options": [
       {
@@ -150,7 +142,7 @@
     "url": "https://www.linkedin.com/jobs/search/?currentJobId=4305771372&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
     "question": "Are you willing to take a 30 to 60 minute live engineering coding challenge as part of the interview process?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-24T21:53:18.537Z",
     "options": [
       {
@@ -388,7 +380,168 @@
     "jobId": "4318623432",
     "question": "How many years of work experience do you have with Google Cloud Platform (GCP)?",
     "answerType": "number",
-    "answer": null,
+    "answer": 0,
     "timestamp": "2025-10-25T03:52:42.624Z"
+  },
+  {
+    "jobId": "4315060233",
+    "question": "Do you have 5+ years of full-stack experience building modern, scalable web applications?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-25T04:14:14.875Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4315060233",
+    "question": "Have you built production-level applications using AWS Lambda or DynamoDB?",
+    "answerType": "dropdown",
+    "answer": "No",
+    "timestamp": "2025-10-25T04:14:14.893Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4315060233",
+    "question": "Are you available to work overlapping hours with U.S. Pacific Time?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-25T04:14:14.903Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4317101155",
+    "question": "Have you integrated front-end web experiences using Webflow?",
+    "answerType": "dropdown",
+    "answer": "No",
+    "timestamp": "2025-10-25T04:15:33.745Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4317101155",
+    "question": "Have you worked in a small startup or early-stage team (<20 people)?",
+    "answerType": "dropdown",
+    "answer": "No",
+    "timestamp": "2025-10-25T04:15:33.762Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4317960332",
+    "question": "How many years of work experience do you have with Salesforce.com?",
+    "answerType": "number",
+    "answer": 0,
+    "timestamp": "2025-10-25T04:16:11.461Z"
+  },
+  {
+    "jobId": "4317960332",
+    "question": "How many years of work experience do you have with GraphQL?",
+    "answerType": "number",
+    "answer": 1,
+    "timestamp": "2025-10-25T04:16:11.471Z"
+  },
+  {
+    "jobId": "4305771372",
+    "question": "Do you currently reside in Eastern or Central time zones?",
+    "answerType": "dropdown",
+    "answer": "No",
+    "timestamp": "2025-10-25T04:35:44.117Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4317464986",
+    "question": "Are you willing to participate in a coding challenge to showcase your skills?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-25T04:36:54.842Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
   }
 ]
