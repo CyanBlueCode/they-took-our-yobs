@@ -360,7 +360,7 @@
     "jobId": "4292487408",
     "question": "Do you live within 100 miles of the San Francisco Bay Area?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "No",
     "timestamp": "2025-10-25T02:59:49.709Z",
     "options": [
       {
@@ -376,5 +376,19 @@
         "value": "No"
       }
     ]
+  },
+  {
+    "jobId": "4331186481",
+    "question": "How many years experience do you have writing production level code?",
+    "answerType": "number",
+    "answer": 13,
+    "timestamp": "2025-10-25T03:41:39.143Z"
+  },
+  {
+    "jobId": "4318623432",
+    "question": "How many years of work experience do you have with Google Cloud Platform (GCP)?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-10-25T03:52:42.624Z"
   }
 ]

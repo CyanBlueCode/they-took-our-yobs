@@ -7,7 +7,7 @@ export async function processEasyApplyModal(page, applicationData) {
   // TODO figure FIRST how to timeout/pause the Playwright browser window on validation error for dev; alt,
   // you can just comment out the auto-advance flow during dev (navigation.js)
   // ANCHOR step 1. make default questions work properly
-  // TODO implement page.waitForTimeout(3000) to pause the app on error instead of using ctrl+c to quit out
+  // TODO implement page.waitForTimeout(2000) to pause the app on error instead of using ctrl+c to quit out
   try {
     while (currentStep < maxSteps) {
       console.log(`Processing modal step ${currentStep + 1}`);
@@ -30,7 +30,7 @@ export async function processEasyApplyModal(page, applicationData) {
         await uncheckFollowCompany(page);
         console.log('Submit button found - submitting application');
         await submitBtn.click();
-        await page.waitForTimeout(3000);
+        await page.waitForTimeout(2000);
         
         // Close success modal
         const successModalClose = await page.$('button[data-test-modal-close-btn]');
@@ -43,7 +43,7 @@ export async function processEasyApplyModal(page, applicationData) {
       } else if (nextBtn) {
         console.log('Next button found - proceeding to next step');
         await nextBtn.click();
-        await page.waitForTimeout(3000);
+        await page.waitForTimeout(2000);
         currentStep++;
       } else if (reviewBtn) {
         console.log('Review button found - proceeding to submit');
@@ -68,14 +68,68 @@ export async function processEasyApplyModal(page, applicationData) {
 // step 2.1. create a new alt flow that allows us to run through applicationHandler.js flow again, but for a
 // specific list of jobId's only
 // TODO error handling - not logging job id correctly
+import config from '../data/config.json' with { type: 'json' };
+
 async function handleValidationError(page) {
   try {
-    const jobId = await getJobId(page);
-    const url = page.url();
     console.log('Validation error - required fields missing');
     
-    console.log('Waiting 6 seconds before closing modal...');
-    await page.waitForTimeout(6000);
+    // Development pause feature
+    if (config.developmentMode && config.pauseOnValidationError) {
+      console.log('\n' + '='.repeat(60));
+      console.log('🛑 DEVELOPMENT PAUSE: VALIDATION ERROR DETECTED!');
+      console.log('='.repeat(60));
+      console.log('Inspect the form now. Options:');
+      console.log('  • Press ENTER to continue immediately');
+      console.log('  • Press SPACE to pause indefinitely');
+      console.log('  • Press Ctrl+C to stop completely');
+      console.log('='.repeat(60));
+      
+      // Set up stdin for immediate key detection
+      process.stdin.setRawMode(true);
+      process.stdin.resume();
+      
+      let paused = false;
+      let shouldContinue = false;
+      
+      const keyListener = (key) => {
+        if (key === '\r' || key === '\n') { // Enter key
+          shouldContinue = true;
+        } else if (key === ' ') { // Space key
+          paused = true;
+          console.log('\n⏸️  PAUSED INDEFINITELY - Press ENTER to continue or Ctrl+C to stop');
+        } else if (key === '\u0003') { // Ctrl+C
+          process.exit(0);
+        }
+      };
+      
+      process.stdin.on('data', keyListener);
+      
+      // Countdown with pause support
+      for (let i = config.pauseDurationSeconds; i > 0 && !shouldContinue; i--) {
+        if (paused) {
+          // Wait indefinitely when paused
+          while (paused && !shouldContinue) {
+            await new Promise(resolve => setTimeout(resolve, 100));
+          }
+          break;
+        }
+        process.stdout.write(`\rAuto-continuing in ${i} seconds...`);
+        await new Promise(resolve => setTimeout(resolve, 1000));
+      }
+      
+      // Cleanup
+      process.stdin.removeListener('data', keyListener);
+      process.stdin.setRawMode(false);
+      process.stdin.pause();
+      
+      console.log('\n' + '='.repeat(60));
+      console.log('🔄 CONTINUING WITH ERROR HANDLING...');
+      console.log('='.repeat(60) + '\n');
+    }
+    
+    console.log('Closing modal and saving application...');
+    await page.waitForTimeout(2000);
     
     // Close modal and save
     const closeBtn = await page.$('button.artdeco-modal__dismiss');
@@ -276,14 +330,14 @@ async function fillRadioButtons(page, applicationData) {
           if (label) {
             await Promise.race([
               label.click(),
-              page.waitForTimeout(3000)
+              page.waitForTimeout(2000)
             ]);
             console.log(`Selected radio button with: ${targetValue}`);
           } else {
             console.log('DEBUG: Label not found, trying direct click');
             await Promise.race([
               radioButton.click(),
-              page.waitForTimeout(3000)
+              page.waitForTimeout(2000)
             ]);
           }
           await page.waitForTimeout(300);
