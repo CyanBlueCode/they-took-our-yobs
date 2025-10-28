@@ -155,6 +155,15 @@ async function uncheckFollowCompany(page) {
 }
 
 async function fillFormFields(page, applicationData) {
+  // Check for Voluntary self identification page and skip
+  // REVIEW: some "Voluntary self identification" forms have required fields; need to solve for this
+  // while leaving rest of answers blank
+  // const voluntaryHeader = await page.$('h3:has-text("Voluntary self identification")');
+  // if (voluntaryHeader) {
+  //   console.log('Voluntary self identification page detected - skipping form filling');
+  //   return;
+  // }
+
   // Fill text inputs (broader selector to catch all text inputs)
   const textInputs = await page.$$('input.artdeco-text-input--input');
   console.log(`DEBUG: Found ${textInputs.length} text inputs`);
@@ -326,8 +335,9 @@ async function fillRadioButtons(page) {
     }
     
     const questionText = await legend.textContent();
-    console.log(`DEBUG: Question: "${questionText.trim()}"`);
-    const answer = getAnswerForLabel(questionText, page);
+    const cleanQuestionText = questionText.replace(/\s+/g, ' ').trim();
+    console.log(`DEBUG: Question: "${cleanQuestionText}"`);
+    const answer = getAnswerForLabel(cleanQuestionText, page);
     console.log(`DEBUG: Answer: ${answer} (${typeof answer})`);
     
     if (typeof answer === 'boolean') {
@@ -355,7 +365,18 @@ async function fillRadioButtons(page) {
           }
           await randomWait(page);
         } else {
-          console.log('DEBUG: Radio button not found');
+          console.log('DEBUG: Radio button not found, trying fallback label click');
+          // Fallback: try clicking any label containing the target value
+          const labels = await fieldset.$$('label');
+          for (const label of labels) {
+            const labelText = await label.textContent();
+            if (labelText && labelText.trim().toLowerCase() === targetValue.toLowerCase()) {
+              console.log(`DEBUG: Fallback - clicking label: ${labelText.trim()}`);
+              await label.click();
+              await randomWait(page);
+              break;
+            }
+          }
         }
       } catch (error) {
         console.log(`DEBUG: Error: ${error.message}`);

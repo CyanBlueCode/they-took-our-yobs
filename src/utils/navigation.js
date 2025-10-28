@@ -100,13 +100,28 @@ export async function processJobListings(page, applicationData) {
   }
 
   // Pagination (make sure we only click if enabled)
-  const nextButton = await page.$('button[aria-label="Next"]:not([disabled])');
+  const nextButton = await page.$('button[aria-label="View next page"]:not([disabled])');
   if (nextButton) {
     console.log('Next page available → clicking.');
+    const currentUrl = page.url();
     await nextButton.click();
-    await randomWait(page); // let page refresh
+    
+    // Wait for URL to change or timeout after 5 seconds
+    try {
+      await page.waitForFunction(
+        (oldUrl) => window.location.href !== oldUrl,
+        currentUrl,
+        { timeout: 5000 }
+      );
+    } catch (error) {
+      console.log('URL did not change, continuing anyway...');
+    }
+    
+    await randomWait(page);
+    return true; // Has next page
   } else {
     console.log('No more pages.');
+    return false; // No next page
   }
 }
 

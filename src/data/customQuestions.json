@@ -105,6 +105,20 @@
     "timestamp": "static"
   },
   {
+    "jobId": "static",
+    "question": "State",
+    "answerType": "text",
+    "answer": "CA",
+    "timestamp": "static"
+  },
+  {
+    "jobId": "static",
+    "question": "Location (city)",
+    "answerType": "dropdown",
+    "answer": "Los Angeles, California, United States",
+    "timestamp": "static"
+  },
+  {
     "jobId": "4315965868",
     "question": "Are you currently authorized to work in the U.S. on a full-time basis without the need for present or future employment visa sponsorship?",
     "answerType": "dropdown",
@@ -737,7 +751,7 @@
     "jobId": "4318851407",
     "question": "Are you willing to work on equity-only compensation until Series A Funding, which may be a Year from now (Q4 2026)?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "No",
     "timestamp": "2025-10-28T05:44:37.874Z",
     "options": [
       {
@@ -758,7 +772,7 @@
     "jobId": "4318851407",
     "question": "Are you willing to bring your own device but follow the company's IT guidelines for source code and IP-related matters?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T05:44:37.885Z",
     "options": [
       {
@@ -779,14 +793,14 @@
     "jobId": "4318758404",
     "question": "What is your current location?",
     "answerType": "text",
-    "answer": null,
+    "answer": "Los Angeles, CA",
     "timestamp": "2025-10-28T05:47:53.950Z"
   },
   {
     "jobId": "4318059991",
     "question": "Do you have at least 6 years of experience working in software engineering, including building and maintaining scalable SaaS platforms using Python?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T05:50:00.094Z",
     "options": [
       {
@@ -807,14 +821,14 @@
     "jobId": "4318082872",
     "question": "What is your university grade point average (4.0 GPA Scale)?",
     "answerType": "text",
-    "answer": null,
+    "answer": "3.7",
     "timestamp": "2025-10-28T05:50:31.354Z"
   },
   {
     "jobId": "4318082872",
     "question": "What is your level of proficiency in English?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Native or bilingual",
     "timestamp": "2025-10-28T05:50:31.370Z",
     "options": [
       {
@@ -843,7 +857,7 @@
     "jobId": "4318082872",
     "question": "Did you complete a 4-year Bachelor's degree in the United States?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T05:50:31.380Z",
     "options": [
       {
@@ -864,7 +878,7 @@
     "jobId": "4316658290",
     "question": "Have you independently shipped new features end-to-end (including frontend, backend, and basic UX)?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T05:50:46.310Z",
     "options": [
       {
@@ -885,7 +899,7 @@
     "jobId": "4316658290",
     "question": "Are you currently located in a North American time zone (Pacific, Mountain, Central, or Eastern)?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T05:50:46.325Z",
     "options": [
       {
@@ -906,7 +920,7 @@
     "jobId": "4316658290",
     "question": "Do you have experience, with Typescript, React, and Python?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T05:50:46.337Z",
     "options": [
       {
@@ -927,7 +941,7 @@
     "jobId": "4316658290",
     "question": "Have you contributed to any public open-source projects?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T05:50:46.348Z",
     "options": [
       {
@@ -985,5 +999,530 @@
     "answerType": "text",
     "answer": null,
     "timestamp": "2025-10-28T05:51:32.126Z"
+  },
+  {
+    "jobId": "4332490469",
+    "question": "Do you reside in either the CST/EST Time Zone?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:05:51.454Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332490469",
+    "question": "This position has an employment requirement that all candidates must be either US Citizens or Green Card Holders. Do you meet this requirement?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:05:51.474Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318403332",
+    "question": "Do you have professional experience designing and building scalable, distributed systems for a production environment?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:06:59.481Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318403332",
+    "question": "Do you have hands-on professional experience working within a Python,React and Ruby on Rails ecosystem?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:06:59.492Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332328113",
+    "question": "Are you actively using and fluent in TypeScript?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:07:18.314Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4319470080",
+    "question": "Do you have experience with React Native?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:07:35.547Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4319470080",
+    "question": "Have you worked as a lead or principal engineer or a role where you were setting direction for the engineering team?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:07:35.561Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4317913817",
+    "question": "Street address line 1",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-28T19:08:13.432Z"
+  },
+  {
+    "jobId": "4332700802",
+    "question": "This is an equity-only role. That means zero salary or cash compensation. Are you fully aware and still interested?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:21:35.155Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332700802",
+    "question": "This role requires a minimum of 20 hours per week, with no hand-holding. Can you commit to that every week, without exception?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:21:35.164Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4317711180",
+    "question": "Do you have 5+ years of professional experience in software development, with a strong focus on cloud-based applications?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-10-28T19:21:59.946Z"
+  },
+  {
+    "jobId": "4317711180",
+    "question": "Are you proficient in NodeJS and TypeScript?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:21:59.963Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332315156",
+    "question": "Do you have experience in a startup or fast-moving SaaS product environment?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:22:14.375Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332315156",
+    "question": "Do you have experience building and scaling production-grade backend systems?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:22:14.390Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332493825",
+    "question": "What LLM did you use?",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-28T19:23:11.857Z"
+  },
+  {
+    "jobId": "4317231486",
+    "question": "Your Name",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-28T19:23:45.205Z"
+  },
+  {
+    "jobId": "4317231486",
+    "question": "",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-28T19:23:45.211Z"
+  },
+  {
+    "jobId": "4332820152",
+    "question": "Is your degree in Computer Science or something similar?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:44:00.922Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332820152",
+    "question": "Is the majority of your experience mostly back-end focused?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:44:00.934Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332087458",
+    "question": "Do you have 8+ years of overall software engineering experience with at least 2+ years in a technical leadership role?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:48:33.784Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332087458",
+    "question": "Have you architected and deployed cloud-native solutions on AWS (not just used AWS services)?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:48:33.799Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332087458",
+    "question": "Are you hands-on with Python-based microservices (e.g., Flask, Django, or AsyncIO)?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:48:33.809Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332087458",
+    "question": "Have you led or mentored a team of engineers in designing and delivering cloud-based or ML-driven solutions?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:48:33.818Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4317965204",
+    "question": "Do you have 8+ years of hands-on software development experience, with 3+ years in a technical leadership role?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:50:17.018Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4317965204",
+    "question": "Have you independently built complex applications from scratch?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:50:17.030Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4311670508",
+    "question": "Do you have utility-scale experience, and have you taken projects through to NTP?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T19:52:04.532Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318514515",
+    "question": "Are you ready to work on W2?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T20:06:19.833Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318514515",
+    "question": "Are you US Citizen or Green Card holder?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T20:06:19.851Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332076415",
+    "question": "What are your salary expectations?",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-28T20:08:05.031Z"
   }
 ]

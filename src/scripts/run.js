@@ -30,8 +30,17 @@ import fs from 'fs';
     const applicationData = JSON.parse(
       fs.readFileSync('src/data/application.json', 'utf-8')
     );
-    await processJobListings(page, applicationData);
-    console.log('Run finished.');
+    
+    let hasNextPage = true;
+    let pageCount = 1;
+    
+    while (hasNextPage) {
+      console.log(`\n=== Processing page ${pageCount} ===`);
+      hasNextPage = await processJobListings(page, applicationData);
+      pageCount++;
+    }
+    
+    console.log('Run finished - no more pages.');
     page.waitForTimeout(10000000);
     // NOTE COMMENT OUT FOR DEV
     // await browser.close();

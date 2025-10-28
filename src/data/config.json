@@ -1,4 +1,6 @@
 {
+  "loginUserName": "chaseyang33@gmail.com",
+  "loginPassword": "123",
   "developmentMode": true,
   "pauseOnValidationError": true,
   "pauseDurationSeconds": 10,
