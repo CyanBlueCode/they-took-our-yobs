@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-export function logCustomQuestion(url, questionText, answerType, options = null) {
+function logQuestion(url, questionText, answerType, options = null, isDuration = false) {
   const timestamp = new Date().toISOString();
   
   // Extract jobId from URL
@@ -11,7 +11,7 @@ export function logCustomQuestion(url, questionText, answerType, options = null)
   // Clean and deduplicate question text
   let cleanQuestion = questionText.replace(/\s+/g, ' ').trim();
   
-  // Remove duplicate text if present - check for pattern like "text? text?"
+  // Remove duplicate text if present
   const words = cleanQuestion.split(' ');
   const halfLength = Math.floor(words.length / 2);
   const firstHalf = words.slice(0, halfLength).join(' ');
@@ -33,7 +33,8 @@ export function logCustomQuestion(url, questionText, answerType, options = null)
     logEntry.options = options;
   }
   
-  const logPath = path.join(process.cwd(), 'src/data/customQuestions.json');
+  const fileName = isDuration ? 'durationQuestions.json' : 'customQuestions.json';
+  const logPath = path.join(process.cwd(), `src/data/${fileName}`);
   let logs = [];
   
   if (fs.existsSync(logPath)) {
@@ -45,6 +46,15 @@ export function logCustomQuestion(url, questionText, answerType, options = null)
   if (!exists) {
     logs.push(logEntry);
     fs.writeFileSync(logPath, JSON.stringify(logs, null, 2));
-    console.log(`Logged custom question: ${questionText.trim()}`);
+    const questionType = isDuration ? 'duration' : 'custom';
+    console.log(`Logged ${questionType} question: ${questionText.trim()}`);
   }
+}
+
+export function logDurationQuestion(url, questionText) {
+  logQuestion(url, questionText, 'number', null, true);
+}
+
+export function logCustomQuestion(url, questionText, answerType, options = null) {
+  logQuestion(url, questionText, answerType, options, false);
 }

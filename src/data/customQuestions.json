@@ -1,5 +1,131 @@
 [
   {
+    "jobId": "static",
+    "question": "Phone",
+    "answerType": "text",
+    "answer": "323 673 0389",
+    "timestamp": "static"
+  },
+  {
+    "jobId": "static",
+    "question": "Email",
+    "answerType": "text",
+    "answer": "chasey@duck.com",
+    "timestamp": "static"
+  },
+  {
+    "jobId": "static",
+    "question": "Full Name",
+    "answerType": "text",
+    "answer": "Chase Yang",
+    "timestamp": "static"
+  },
+  {
+    "jobId": "4318758404",
+    "question": "LinkedIn",
+    "answerType": "text",
+    "answer": "https://www.linkedin.com/in/chase-y-b28b0a106/",
+    "timestamp": "2025-10-28T05:43:56.605Z"
+  },
+  {
+    "jobId": "static",
+    "question": "Have you completed the following level of education: Bachelor's Degree?",
+    "answerType": "boolean",
+    "answer": true,
+    "timestamp": "static"
+  },
+  {
+    "jobId": "static",
+    "question": "Are you willing to undergo a background check, in accordance with local law/regulations?",
+    "answerType": "boolean",
+    "answer": true,
+    "timestamp": "static"
+  },
+  {
+    "jobId": "static",
+    "question": "Do you have a valid driver's license?",
+    "answerType": "boolean",
+    "answer": true,
+    "timestamp": "static"
+  },
+  {
+    "jobId": "static",
+    "question": "Are you willing to take a drug test, in accordance with local law/regulations?",
+    "answerType": "boolean",
+    "answer": true,
+    "timestamp": "static"
+  },
+  {
+    "jobId": "static",
+    "question": "Are you comfortable commuting to this job's location?",
+    "answerType": "boolean",
+    "answer": false,
+    "timestamp": "static"
+  },
+  {
+    "jobId": "static",
+    "question": "Are you comfortable working in an onsite setting?",
+    "answerType": "boolean",
+    "answer": false,
+    "timestamp": "static"
+  },
+  {
+    "jobId": "static",
+    "question": "Are you comfortable working in a hybrid setting?",
+    "answerType": "boolean",
+    "answer": true,
+    "timestamp": "static"
+  },
+  {
+    "jobId": "static",
+    "question": "Are you comfortable working in a remote setting?",
+    "answerType": "boolean",
+    "answer": true,
+    "timestamp": "static"
+  },
+  {
+    "jobId": "static",
+    "question": "We must fill this position urgently. Can you start immediately?",
+    "answerType": "boolean",
+    "answer": true,
+    "timestamp": "static"
+  },
+  {
+    "jobId": "static",
+    "question": "Will you now, or in the future, require sponsorship for employment visa status (e.g. H-1B visa status)?",
+    "answerType": "boolean",
+    "answer": false,
+    "timestamp": "static"
+  },
+  {
+    "jobId": "static",
+    "question": "Are you legally authorized to work in the United States?",
+    "answerType": "boolean",
+    "answer": true,
+    "timestamp": "static"
+  },
+  {
+    "jobId": "4315965868",
+    "question": "Are you currently authorized to work in the U.S. on a full-time basis without the need for present or future employment visa sponsorship?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-28T05:24:34.151Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
     "jobId": "unknown",
     "url": "https://www.linkedin.com/jobs/search/?currentJobId=4317464986&f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true",
     "question": "How many years of work experience do you have with TypeScript?",
@@ -543,5 +669,321 @@
         "value": "No"
       }
     ]
+  },
+  {
+    "jobId": "4315965868",
+    "question": "Do you have 10 or more years of professional software engineering experience?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-28T05:24:34.138Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4315965868",
+    "question": "Do you have 7 or more years of professional Full Stack engineering experience?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-28T05:24:34.160Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4315965868",
+    "question": "Do you have 7 or more years of technical leadership experience, such as driving the architecture for complex, cross-functional projects?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-28T05:24:34.169Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318851407",
+    "question": "Are you willing to work on equity-only compensation until Series A Funding, which may be a Year from now (Q4 2026)?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T05:44:37.874Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318851407",
+    "question": "Are you willing to bring your own device but follow the company's IT guidelines for source code and IP-related matters?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T05:44:37.885Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318758404",
+    "question": "What is your current location?",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-28T05:47:53.950Z"
+  },
+  {
+    "jobId": "4318059991",
+    "question": "Do you have at least 6 years of experience working in software engineering, including building and maintaining scalable SaaS platforms using Python?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T05:50:00.094Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318082872",
+    "question": "What is your university grade point average (4.0 GPA Scale)?",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-28T05:50:31.354Z"
+  },
+  {
+    "jobId": "4318082872",
+    "question": "What is your level of proficiency in English?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T05:50:31.370Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "None",
+        "value": "None"
+      },
+      {
+        "text": "Conversational",
+        "value": "Conversational"
+      },
+      {
+        "text": "Professional",
+        "value": "Professional"
+      },
+      {
+        "text": "Native or bilingual",
+        "value": "Native or bilingual"
+      }
+    ]
+  },
+  {
+    "jobId": "4318082872",
+    "question": "Did you complete a 4-year Bachelor's degree in the United States?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T05:50:31.380Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4316658290",
+    "question": "Have you independently shipped new features end-to-end (including frontend, backend, and basic UX)?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T05:50:46.310Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4316658290",
+    "question": "Are you currently located in a North American time zone (Pacific, Mountain, Central, or Eastern)?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T05:50:46.325Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4316658290",
+    "question": "Do you have experience, with Typescript, React, and Python?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T05:50:46.337Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4316658290",
+    "question": "Have you contributed to any public open-source projects?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-28T05:50:46.348Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4319224707",
+    "question": "NodeJS Development",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-28T05:51:32.095Z"
+  },
+  {
+    "jobId": "4319224707",
+    "question": "Javascript Development",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-28T05:51:32.103Z"
+  },
+  {
+    "jobId": "4319224707",
+    "question": "AWS Serverless",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-28T05:51:32.109Z"
+  },
+  {
+    "jobId": "4319224707",
+    "question": "React JS",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-28T05:51:32.115Z"
+  },
+  {
+    "jobId": "4319224707",
+    "question": "BACK-END CDK frameworks and code",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-28T05:51:32.121Z"
+  },
+  {
+    "jobId": "4319224707",
+    "question": "AWS - Kinesis",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-28T05:51:32.126Z"
   }
 ]

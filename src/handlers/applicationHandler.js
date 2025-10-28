@@ -159,7 +159,7 @@ async function fillFormFields(page, applicationData) {
   const textInputs = await page.$$('input.artdeco-text-input--input');
   console.log(`DEBUG: Found ${textInputs.length} text inputs`);
   for (const input of textInputs) {
-    await fillTextInput(page, input, applicationData);
+    await fillTextInput(page, input);
   }
 
   // Fill dropdowns (broader selector to catch all dropdowns)
@@ -167,14 +167,14 @@ async function fillFormFields(page, applicationData) {
   console.log(`DEBUG: Found ${dropdowns.length} dropdowns`);
   for (let i = 0; i < dropdowns.length; i++) {
     console.log(`DEBUG: Processing dropdown ${i + 1}`);
-    await fillDropdown(page, dropdowns[i], applicationData);
+    await fillDropdown(page, dropdowns[i]);
   }
 
   // Fill radio buttons
-  await fillRadioButtons(page, applicationData);
+  await fillRadioButtons(page);
   
   // Fill custom questions
-  await fillCustomQuestions(page, applicationData);
+  await fillCustomQuestions(page);
   
   // Check for validation errors
   const errorElements = await page.$$('.artdeco-inline-feedback--error');
@@ -184,7 +184,7 @@ async function fillFormFields(page, applicationData) {
   }
 }
 
-async function fillTextInput(page, input, applicationData) {
+async function fillTextInput(page, input) {
   const value = await input.inputValue();
   if (value) {
     console.log('Input already filled, skipping');
@@ -193,7 +193,7 @@ async function fillTextInput(page, input, applicationData) {
 
   const label = await getInputLabel(page, input);
   console.log(`DEBUG: Text input label: "${label}"`);
-  const fillValue = getAnswerForLabel(label, applicationData);
+  const fillValue = getAnswerForLabel(label, page);
   console.log(`DEBUG: Text input answer: ${fillValue}`);
 
   if (fillValue !== null && fillValue !== undefined) {
@@ -203,16 +203,22 @@ async function fillTextInput(page, input, applicationData) {
     await randomWait(page);
   } else {
     console.log(`No answer found for text input "${label}"`);
-    // Log as custom question if it looks like a question
-    if (label.includes('?') || label.toLowerCase().includes('years') || label.toLowerCase().includes('experience')) {
-      const url = page.url();
-      const answerType = label.toLowerCase().includes('years') ? 'number' : 'text';
+    // Log as custom question if no answer found
+    const url = page.url();
+    const lowerLabel = label.toLowerCase();
+    
+    // Check if it's a duration question
+    if (lowerLabel.includes('how many years')) {
+      logDurationQuestion(url, label);
+    } else {
+      // Log all other unanswered questions
+      const answerType = lowerLabel.includes('years') ? 'number' : 'text';
       logCustomQuestion(url, label, answerType);
     }
   }
 }
 
-async function fillDropdown(page, dropdown, applicationData) {
+async function fillDropdown(page, dropdown) {
   const selectedValue = await dropdown.inputValue();
   if (selectedValue && selectedValue !== 'Select an option') {
     console.log('Dropdown already selected, skipping');
@@ -221,7 +227,7 @@ async function fillDropdown(page, dropdown, applicationData) {
 
   const label = await getDropdownLabel(page, dropdown);
   console.log(`DEBUG: Dropdown label: "${label}"`);
-  const fillValue = getAnswerForLabel(label, applicationData);
+  const fillValue = getAnswerForLabel(label, page);
   console.log(`DEBUG: Dropdown answer: ${fillValue}`);
   
   console.log(`Dropdown label: "${label}", looking for value: "${fillValue}"`);
@@ -256,7 +262,7 @@ async function fillDropdown(page, dropdown, applicationData) {
             optionValue?.toLowerCase() === searchValue.toLowerCase()) {
           console.log(`Selecting dropdown "${label}" option: ${optionText}`);
           await dropdown.selectOption(optionValue);
-          await page.waitForTimeout(500);
+          await randomWait(page);
           found = true;
           break;
         }
@@ -307,7 +313,7 @@ async function fillDropdown(page, dropdown, applicationData) {
   }
 }
 
-async function fillRadioButtons(page, applicationData) {
+async function fillRadioButtons(page) {
   console.log('DEBUG: Starting radio button fill');
   const fieldsets = await page.$$('fieldset[data-test-form-builder-radio-button-form-component="true"]');
   console.log(`DEBUG: Found ${fieldsets.length} fieldsets`);
@@ -321,7 +327,7 @@ async function fillRadioButtons(page, applicationData) {
     
     const questionText = await legend.textContent();
     console.log(`DEBUG: Question: "${questionText.trim()}"`);
-    const answer = getAnswerForLabel(questionText, applicationData);
+    const answer = getAnswerForLabel(questionText, page);
     console.log(`DEBUG: Answer: ${answer} (${typeof answer})`);
     
     if (typeof answer === 'boolean') {
@@ -347,7 +353,7 @@ async function fillRadioButtons(page, applicationData) {
               page.waitForTimeout(2000)
             ]);
           }
-          await page.waitForTimeout(300);
+          await randomWait(page);
         } else {
           console.log('DEBUG: Radio button not found');
         }
@@ -402,27 +408,25 @@ async function getDropdownLabel(page, dropdown) {
   return '';
 }
 
-import questions from '../data/questions.json' with { type: 'json' };
-import keywords from '../data/keywords.json' with { type: 'json' };
-import answers from '../data/answers.json' with { type: 'json' };
 import customQuestions from '../data/customQuestions.json' with { type: 'json' };
-import { logCustomQuestion } from '../utils/logger.js';
+import durationQuestions from '../data/durationQuestions.json' with { type: 'json' };
+import { logCustomQuestion, logDurationQuestion } from '../utils/logger.js';
 
-async function fillCustomQuestions(page, applicationData) {
+async function fillCustomQuestions(page) {
   // Handle dropdowns that might be custom questions
   const customDropdowns = await page.$$('select:not(.fb-dash-form-element__select-dropdown)');
   for (const dropdown of customDropdowns) {
-    await fillCustomDropdown(page, dropdown, applicationData);
+    await fillCustomDropdown(page, dropdown);
   }
   
   // Handle number inputs that might be custom questions
   const numberInputs = await page.$$('input[type="number"]:not(.artdeco-text-input--input)');
   for (const input of numberInputs) {
-    await fillCustomNumberInput(page, input, applicationData);
+    await fillCustomNumberInput(page, input);
   }
 }
 
-async function fillCustomDropdown(page, dropdown, applicationData) {
+async function fillCustomDropdown(page, dropdown) {
   const selectedValue = await dropdown.inputValue();
   if (selectedValue && selectedValue !== 'Select an option') {
     return;
@@ -466,7 +470,7 @@ async function fillCustomDropdown(page, dropdown, applicationData) {
   }
 }
 
-async function fillCustomNumberInput(page, input, applicationData) {
+async function fillCustomNumberInput(page, input) {
   const value = await input.inputValue();
   if (value) return;
 
@@ -478,7 +482,7 @@ async function fillCustomNumberInput(page, input, applicationData) {
   if (answer !== null) {
     console.log(`Filling custom number input "${label}" with: ${answer}`);
     await input.fill(answer.toString());
-    await page.waitForTimeout(500);
+    await randomWait(page);
   } else {
     // Log as custom question
     const url = page.url();
@@ -490,23 +494,35 @@ function getCustomAnswer(questionText) {
   const cleanQuestion = questionText.replace(/\s+/g, ' ').trim();
   
   // Check custom questions for exact match first
-  let customQuestion = customQuestions.find(q => q.question === cleanQuestion);
+  let question = customQuestions.find(q => q.question === cleanQuestion);
   
-  // If no exact match, try partial matching
-  if (!customQuestion) {
-    customQuestion = customQuestions.find(q => 
+  // If no exact match in custom questions, check duration questions
+  if (!question) {
+    question = durationQuestions.find(q => q.question === cleanQuestion);
+  }
+  
+  // If still no exact match, try partial matching in both files
+  if (!question) {
+    question = customQuestions.find(q => 
       q.question.toLowerCase().includes(cleanQuestion.toLowerCase()) ||
       cleanQuestion.toLowerCase().includes(q.question.toLowerCase())
     );
   }
   
-  if (customQuestion && customQuestion.answer !== null) {
-    return customQuestion.answer.toString();
+  if (!question) {
+    question = durationQuestions.find(q => 
+      q.question.toLowerCase().includes(cleanQuestion.toLowerCase()) ||
+      cleanQuestion.toLowerCase().includes(q.question.toLowerCase())
+    );
+  }
+  
+  if (question && question.answer !== null) {
+    return question.answer.toString();
   }
   return null;
 }
 
-function getAnswerForLabel(label, applicationData) {
+function getAnswerForLabel(label, page = null) {
   if (!label) return null;
 
   const cleanLabel = label.replace(/\s+/g, ' ').trim();
@@ -514,36 +530,11 @@ function getAnswerForLabel(label, applicationData) {
   console.log(`DEBUG: Processing label: "${cleanLabel}"`);
   console.log(`DEBUG: Lower label: "${lowerLabel}"`);
 
-  // Direct application data matches
-  console.log(`DEBUG: Checking direct matches`);
-  if (lowerLabel.includes('phone') || lowerLabel.includes('mobile')) {
-    console.log(`DEBUG: Found phone match`);
-    return applicationData.phone;
-  }
-  if (lowerLabel.includes('email')) {
-    console.log(`DEBUG: Found email match`);
-    return applicationData.email;
-  }
-  if (lowerLabel.includes('name')) {
-    console.log(`DEBUG: Found name match`);
-    return applicationData.fullName;
-  }
 
-  // Work authorization
-  console.log(`DEBUG: Checking work authorization`);
-  if (lowerLabel.includes('legally authorized to work')) {
-    console.log(`DEBUG: Found work authorization match`);
-    return answers.boolean['work-authorization'];
-  }
 
-  // Relocation/states (more specific matching)
-  console.log(`DEBUG: Checking relocation`);
-  if (lowerLabel.includes('relocating') || (lowerLabel.includes('reside') && lowerLabel.includes('state'))) {
-    console.log(`DEBUG: Found relocation match`);
-    return answers.location || null;
-  }
 
-  // Check custom questions first (highest priority)
+
+  // Check custom questions (highest priority)
   console.log(`DEBUG: Checking custom questions`);
   const customAnswer = getCustomAnswer(cleanLabel);
   console.log(`DEBUG: Custom answer: ${customAnswer}`);
@@ -551,119 +542,23 @@ function getAnswerForLabel(label, applicationData) {
     return customAnswer;
   }
 
-  // Match against questions.json patterns using partial matching
-  console.log(`DEBUG: Checking questions.json patterns`);
-  for (const questionPattern of questions) {
-    const questionLower = questionPattern.question.toLowerCase();
-    if (lowerLabel.includes(questionLower) || questionLower.includes(lowerLabel)) {
-      console.log(`DEBUG: Found questions.json match: ${questionPattern.id}`);
-      return getAnswerById(questionPattern.id, lowerLabel);
+  // Check for duration questions ("How many years" patterns)
+  console.log(`DEBUG: Checking duration questions`);
+  if (lowerLabel.includes('how many years')) {
+    console.log(`DEBUG: Found duration question pattern`);
+    // Log as duration question for manual completion
+    if (page) {
+      const url = page.url();
+      logDurationQuestion(url, cleanLabel);
     }
-  }
-  console.log(`DEBUG: No questions.json matches found`);
-
-  // Experience questions with tech keywords (fallback)
-  console.log(`DEBUG: Checking experience condition - includes 'experience': ${lowerLabel.includes('experience')}, includes 'years': ${lowerLabel.includes('years')}`);
-  if (lowerLabel.includes('experience') && lowerLabel.includes('years')) {
-    console.log(`DEBUG: Entering tech keyword matching`);
-    const techMatch = findTechKeyword(lowerLabel);
-    console.log(`DEBUG: Tech match for "${lowerLabel}": ${techMatch}`);
-    if (techMatch && answers.experienceYears[techMatch]) {
-      console.log(`DEBUG: Found experience years for ${techMatch}: ${answers.experienceYears[techMatch]}`);
-      return answers.experienceYears[techMatch].toString();
-    }
+    return null; // Let it fall through to logging
   }
 
   console.log(`DEBUG: No answer found for: "${cleanLabel}"`);
   return null;
 }
 
-function getAnswerById(questionId, label) {
-  console.log(`DEBUG: getAnswerById called with questionId: ${questionId}, label: ${label}`);
-  
-  // Check for direct answer in answers.json
-  if (answers.boolean && answers.boolean[questionId] !== undefined) {
-    console.log(`DEBUG: Found boolean answer for ${questionId}: ${answers.boolean[questionId]}`);
-    return answers.boolean[questionId];
-  }
-  
-  // Handle job function experience questions
-  if (questionId === 'job-function-experience') {
-    console.log(`DEBUG: Processing job-function-experience question`);
-    const lowerLabel = label.toLowerCase();
-    
-    // Try tech keywords first
-    if (lowerLabel.includes('experience') && lowerLabel.includes('years')) {
-      const techMatch = findTechKeyword(lowerLabel);
-      console.log(`DEBUG: Tech match in getAnswerById: ${techMatch}`);
-      if (techMatch && answers.experienceYears[techMatch] !== undefined) {
-        console.log(`DEBUG: Found experience years for ${techMatch}: ${answers.experienceYears[techMatch]}`);
-        return answers.experienceYears[techMatch].toString();
-      }
-    }
-    
-    // Try job function keywords
-    for (const [jobFunc, variations] of Object.entries(keywords.jobFunctions)) {
-      if (variations.some(variation => lowerLabel.includes(variation))) {
-        console.log(`DEBUG: Found job function match: ${jobFunc}`);
-        if (answers.jobFunction[jobFunc]) {
-          return answers.jobFunction[jobFunc].toString();
-        }
-      }
-    }
-  }
-  
-  // Handle specific cases
-  if (questionId === 'linkedin-profile') {
-    return answers.linkedinProfile || null;
-  }
-  
-  if (questionId === 'website') {
-    return answers.website || null;
-  }
-  
-  if (questionId === 'location') {
-    return answers.location || null;
-  }
-  
-  console.log(`DEBUG: No answer found for questionId: ${questionId}`);
-  return null;
-}
 
-  // Strips spaces & symbols for keyword matching
-function normalizeText(text) {
-  return text.toLowerCase().replace(/[^a-z0-9]/g, '');
-}
-
-function findTechKeyword(label) {
-  console.log(`DEBUG: Looking for tech in: "${label}"`);
-  const normalizedLabel = normalizeText(label);
-  
-  // Sort skills by longest variation first to check more specific matches first
-  const sortedSkills = Object.entries(keywords.skills).sort((a, b) => {
-    const maxLengthA = Math.max(...a[1].map(v => v.length));
-    const maxLengthB = Math.max(...b[1].map(v => v.length));
-    return maxLengthB - maxLengthA;
-  });
-  
-  for (const [tech, variations] of sortedSkills) {
-    console.log(`DEBUG: Checking ${tech} with variations: ${variations.join(', ')}`);
-    
-    // Sort variations by length descending within each tech
-    const sortedVariations = variations.sort((a, b) => b.length - a.length);
-    
-    for (const variation of sortedVariations) {
-      const normalizedVariation = normalizeText(variation);
-      if (normalizedLabel.includes(normalizedVariation)) {
-        console.log(`DEBUG: Found match: ${tech} (${variation} -> ${normalizedVariation})`);
-        return tech;
-      }
-    }
-  }
-  
-  console.log(`DEBUG: No tech match found`);
-  return null;
-}
 
 export async function applyToJob(page, applicationData) {
   console.log('Pretending to upload resume:', applicationData.resumePath);
