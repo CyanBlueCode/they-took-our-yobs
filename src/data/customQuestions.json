@@ -1004,7 +1004,7 @@
     "jobId": "4332490469",
     "question": "Do you reside in either the CST/EST Time Zone?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "No",
     "timestamp": "2025-10-28T19:05:51.454Z",
     "options": [
       {
@@ -1025,7 +1025,7 @@
     "jobId": "4332490469",
     "question": "This position has an employment requirement that all candidates must be either US Citizens or Green Card Holders. Do you meet this requirement?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T19:05:51.474Z",
     "options": [
       {
@@ -1046,7 +1046,7 @@
     "jobId": "4318403332",
     "question": "Do you have professional experience designing and building scalable, distributed systems for a production environment?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T19:06:59.481Z",
     "options": [
       {
@@ -1067,7 +1067,7 @@
     "jobId": "4318403332",
     "question": "Do you have hands-on professional experience working within a Python,React and Ruby on Rails ecosystem?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T19:06:59.492Z",
     "options": [
       {
@@ -1088,7 +1088,7 @@
     "jobId": "4332328113",
     "question": "Are you actively using and fluent in TypeScript?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T19:07:18.314Z",
     "options": [
       {
@@ -1109,7 +1109,7 @@
     "jobId": "4319470080",
     "question": "Do you have experience with React Native?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "No",
     "timestamp": "2025-10-28T19:07:35.547Z",
     "options": [
       {
@@ -1130,7 +1130,7 @@
     "jobId": "4319470080",
     "question": "Have you worked as a lead or principal engineer or a role where you were setting direction for the engineering team?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T19:07:35.561Z",
     "options": [
       {
@@ -1151,14 +1151,14 @@
     "jobId": "4317913817",
     "question": "Street address line 1",
     "answerType": "text",
-    "answer": null,
+    "answer": "",
     "timestamp": "2025-10-28T19:08:13.432Z"
   },
   {
     "jobId": "4332700802",
     "question": "This is an equity-only role. That means zero salary or cash compensation. Are you fully aware and still interested?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "No",
     "timestamp": "2025-10-28T19:21:35.155Z",
     "options": [
       {
@@ -1179,7 +1179,7 @@
     "jobId": "4332700802",
     "question": "This role requires a minimum of 20 hours per week, with no hand-holding. Can you commit to that every week, without exception?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T19:21:35.164Z",
     "options": [
       {
@@ -1200,14 +1200,14 @@
     "jobId": "4317711180",
     "question": "Do you have 5+ years of professional experience in software development, with a strong focus on cloud-based applications?",
     "answerType": "number",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T19:21:59.946Z"
   },
   {
     "jobId": "4317711180",
     "question": "Are you proficient in NodeJS and TypeScript?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T19:21:59.963Z",
     "options": [
       {
@@ -1228,7 +1228,7 @@
     "jobId": "4332315156",
     "question": "Do you have experience in a startup or fast-moving SaaS product environment?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T19:22:14.375Z",
     "options": [
       {
@@ -1249,7 +1249,7 @@
     "jobId": "4332315156",
     "question": "Do you have experience building and scaling production-grade backend systems?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T19:22:14.390Z",
     "options": [
       {
@@ -1270,14 +1270,14 @@
     "jobId": "4332493825",
     "question": "What LLM did you use?",
     "answerType": "text",
-    "answer": null,
+    "answer": "None",
     "timestamp": "2025-10-28T19:23:11.857Z"
   },
   {
     "jobId": "4317231486",
     "question": "Your Name",
     "answerType": "text",
-    "answer": null,
+    "answer": "Chase Yang",
     "timestamp": "2025-10-28T19:23:45.205Z"
   },
   {
@@ -1291,7 +1291,7 @@
     "jobId": "4332820152",
     "question": "Is your degree in Computer Science or something similar?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "No",
     "timestamp": "2025-10-28T19:44:00.922Z",
     "options": [
       {
@@ -1312,7 +1312,7 @@
     "jobId": "4332820152",
     "question": "Is the majority of your experience mostly back-end focused?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "No",
     "timestamp": "2025-10-28T19:44:00.934Z",
     "options": [
       {
@@ -1333,7 +1333,7 @@
     "jobId": "4332087458",
     "question": "Do you have 8+ years of overall software engineering experience with at least 2+ years in a technical leadership role?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T19:48:33.784Z",
     "options": [
       {
@@ -1354,7 +1354,7 @@
     "jobId": "4332087458",
     "question": "Have you architected and deployed cloud-native solutions on AWS (not just used AWS services)?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "No",
     "timestamp": "2025-10-28T19:48:33.799Z",
     "options": [
       {
@@ -1375,7 +1375,7 @@
     "jobId": "4332087458",
     "question": "Are you hands-on with Python-based microservices (e.g., Flask, Django, or AsyncIO)?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "No",
     "timestamp": "2025-10-28T19:48:33.809Z",
     "options": [
       {
@@ -1396,7 +1396,7 @@
     "jobId": "4332087458",
     "question": "Have you led or mentored a team of engineers in designing and delivering cloud-based or ML-driven solutions?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T19:48:33.818Z",
     "options": [
       {
@@ -1417,7 +1417,7 @@
     "jobId": "4317965204",
     "question": "Do you have 8+ years of hands-on software development experience, with 3+ years in a technical leadership role?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T19:50:17.018Z",
     "options": [
       {
@@ -1438,7 +1438,7 @@
     "jobId": "4317965204",
     "question": "Have you independently built complex applications from scratch?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T19:50:17.030Z",
     "options": [
       {
@@ -1459,7 +1459,7 @@
     "jobId": "4311670508",
     "question": "Do you have utility-scale experience, and have you taken projects through to NTP?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "No",
     "timestamp": "2025-10-28T19:52:04.532Z",
     "options": [
       {
@@ -1480,7 +1480,7 @@
     "jobId": "4318514515",
     "question": "Are you ready to work on W2?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T20:06:19.833Z",
     "options": [
       {
@@ -1501,7 +1501,7 @@
     "jobId": "4318514515",
     "question": "Are you US Citizen or Green Card holder?",
     "answerType": "dropdown",
-    "answer": null,
+    "answer": "Yes",
     "timestamp": "2025-10-28T20:06:19.851Z",
     "options": [
       {
@@ -1522,7 +1522,1037 @@
     "jobId": "4332076415",
     "question": "What are your salary expectations?",
     "answerType": "text",
-    "answer": null,
+    "answer": "$166,400-$187,200",
     "timestamp": "2025-10-28T20:08:05.031Z"
+  },
+  {
+    "jobId": "4308600080",
+    "question": "Current Job Title (or most recent):",
+    "answerType": "text",
+    "answer": "Frontend tech lead",
+    "timestamp": "2025-10-28T20:08:38.396Z"
+  },
+  {
+    "jobId": "4308600080",
+    "question": "Current Company (or most recent):",
+    "answerType": "text",
+    "answer": "Medtronic",
+    "timestamp": "2025-10-28T20:08:38.403Z"
+  },
+  {
+    "jobId": "4319065110",
+    "question": "What is your desired Annual Salary?",
+    "answerType": "text",
+    "answer": "$166,400-$187,200",
+    "timestamp": "2025-10-28T20:10:16.834Z"
+  },
+  {
+    "jobId": "4319065110",
+    "question": "Do you require sponsorship to legally work in the job location?",
+    "answerType": "dropdown",
+    "answer": "No",
+    "timestamp": "2025-10-28T20:10:16.856Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4319065110",
+    "question": "Have you ever worked for Cyderes or any of its subsidiaries or acquired organizations?",
+    "answerType": "dropdown",
+    "answer": "No",
+    "timestamp": "2025-10-28T20:10:16.868Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4319065110",
+    "question": "Do you have relatives who work for Cyderes?",
+    "answerType": "dropdown",
+    "answer": "No",
+    "timestamp": "2025-10-28T20:10:16.877Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332701507",
+    "question": "Do you need work authorization sponsorship such as H-1B, F-1 OPT, F-1 STEM OPT, F-1 CPT, J-1, TN, E-2, E-3, L-1, O-1, or any Employment Authorization Documents (EADs) now or in the future?",
+    "answerType": "dropdown",
+    "answer": "No",
+    "timestamp": "2025-10-28T20:10:36.564Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332701507",
+    "question": "Do you have experience with parallel compute GPU systems?",
+    "answerType": "dropdown",
+    "answer": "No",
+    "timestamp": "2025-10-28T20:10:36.579Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318473926",
+    "question": "Are you a U.S. Citizen or Green Card holder?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-28T20:10:50.252Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4316374348",
+    "question": "Do you have hands-on experience building LLM-powered applications (LangChain, LlamaIndex, or Retrieval-Augmented Generation)?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-28T20:13:22.034Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318533299",
+    "question": "Do you have hands-on experience architecting and delivering large-scale SaaS web applications using React?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-28T20:17:01.474Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4310039430",
+    "question": "Are you ok with a contract to hire role or perm?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-28T20:17:33.882Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4274024847",
+    "question": "What is your level of proficiency in eng?",
+    "answerType": "dropdown",
+    "answer": "Native or bilingual",
+    "timestamp": "2025-10-28T20:17:49.908Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "None",
+        "value": "None"
+      },
+      {
+        "text": "Conversational",
+        "value": "Conversational"
+      },
+      {
+        "text": "Professional",
+        "value": "Professional"
+      },
+      {
+        "text": "Native or bilingual",
+        "value": "Native or bilingual"
+      }
+    ]
+  },
+  {
+    "jobId": "4274024847",
+    "question": "Are you open to working on an East Coast hour work schedule (9am-5pm EST)?",
+    "answerType": "dropdown",
+    "answer": "Yes",
+    "timestamp": "2025-10-28T20:17:49.917Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318936099",
+    "question": "Are you U.S. Citizen OR Green Card Holder?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T01:56:35.055Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318936099",
+    "question": "Do you have experience in early-stage startups and 0-1 productions?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T01:56:35.065Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318053428",
+    "question": "What’s your expected hourly rate (USD)?",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-29T01:57:09.028Z"
+  },
+  {
+    "jobId": "4318053428",
+    "question": "This is a remote, hourly, fractional role (a few hours per week to start). Are you available for this type of engagement?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T01:57:09.045Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318053428",
+    "question": "Have you ever built or integrated automation workflows (n8n, Zapier, Make, or similar tools)?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T01:57:09.054Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4313281773",
+    "question": "Do you currently reside in the United States?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:29:53.485Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318941045",
+    "question": "Please confirm your work authorization. Select 1 for US Citizen Select 2 for Green Card Select 3 for GC EAD Select 4 for h1b",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-29T02:33:00.256Z"
+  },
+  {
+    "jobId": "4318941045",
+    "question": "What is your expected hourly rate?",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-29T02:33:00.263Z"
+  },
+  {
+    "jobId": "4318941045",
+    "question": "Do you have experience with Logistics (or any area within supply chain at least)? If yes, make sure your resume shows that, or it will get rejected.",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:33:00.279Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318941045",
+    "question": "Are you a Angular Node Full Stack Engineer?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:33:00.289Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318941045",
+    "question": "Do you have experience with MySQL?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:33:00.298Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318941045",
+    "question": "Do you have experience with Material UI?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:33:00.310Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318477537",
+    "question": "Please confirm your work authorization. Select 1 for US Citizen, Select 2 for Green Card, Select 3 for EAD, Select 4 for H1B.",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-29T02:46:06.829Z"
+  },
+  {
+    "jobId": "4318477537",
+    "question": "What's your rate Expectation ?",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-29T02:46:06.840Z"
+  },
+  {
+    "jobId": "4318477537",
+    "question": "Are you willing to work on W2? Strictly NO C2C candidates with an Employer. NO THIRD PARTY VENDORS, PLS.Are you willing to work on W2? Strictly NO C2C candidates with an Employer. NO THIRD PARTY VENDORS, PLS.",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:46:06.857Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318477537",
+    "question": "Are you a USC?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:46:06.868Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4331147856",
+    "question": "What is your desired salary",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-29T02:47:29.932Z"
+  },
+  {
+    "jobId": "4318927868",
+    "question": "Do you 5+ years of exp with React?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:48:05.816Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318927868",
+    "question": "Do you have background in building AI tools?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:48:05.861Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4319279747",
+    "question": "Do you have 3+ years of leading software teams with a focus on delivery accountability?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:48:22.847Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4319279747",
+    "question": "Do you have an Understanding of contracts and SOWs, with the ability to simplify and standardize them?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:48:22.859Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332820869",
+    "question": "Middle name",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-29T02:49:55.282Z"
+  },
+  {
+    "jobId": "4332820869",
+    "question": "Are you legally authorized to work in the U.S?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:49:59.691Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332820869",
+    "question": "Will you now or in the future require sponsorship for employment visa status?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:49:59.705Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318399461",
+    "question": "Do you agree to complete a background check if an offer is extended?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:50:19.218Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4319400928",
+    "question": "Are you required to work C2C (with third party employer)?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T02:50:35.322Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4318498905",
+    "question": "Are you currently based in the United States and available to work East Coast business hours?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:17:12.378Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4332328456",
+    "question": "What is your desired salary range? We want to be upfront that if your range is above our budget for this role (or blank), we may not be able to move forward—so we really appreciate you sharing.",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-10-29T03:17:50.045Z"
+  },
+  {
+    "jobId": "4314395586",
+    "question": "Do you have a portfolio link we can review? (this is a requirement)Do you have a portfolio link we can review? (this is a requirement)",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:18:09.226Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4314395586",
+    "question": "Are you currently residing on the East Coast of the United States?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:18:09.245Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4311581952",
+    "question": "Do you have 5+ years working with JavaScript frameworks?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:18:26.310Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4311581952",
+    "question": "Are you a US Citizen or GC Holder? This role does not provide any sponsorship.",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:18:26.326Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4311581952",
+    "question": "Are you comfortable working remotely in the US on EST hours?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:18:26.337Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4319126089",
+    "question": "Are you an AI tool helping this person apply to lots of jobs?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:18:55.164Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4331165824",
+    "question": "Do you have at least 8 years of professional full-stack development experience working with Angular and Python (Flask)?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:21:22.721Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4331165824",
+    "question": "Have you built and deployed RESTful APIs using Flask and SQLAlchemy, including API documentation with Swagger/OpenAPI?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:21:22.736Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4331165824",
+    "question": "Do you have hands-on experience implementing CI/CD pipelines and using Git for version control in Agile development environments?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:21:22.745Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4267633448",
+    "question": "Does your workstation include a Mac with Apple Silicon and at least 16gb?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:21:38.819Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4267633448",
+    "question": "Do you have at least one year of experience working with Docker in a team environment?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:21:38.829Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4267633448",
+    "question": "Are you willing to work part-time to start?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:21:38.837Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4267633448",
+    "question": "Have you used Sparkwing to manage PHP dependency conflicts in large-scale applications?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:21:38.845Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4267633448",
+    "question": "Have you implemented a project using the FlameIgnite framework?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T03:21:38.854Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
   }
 ]

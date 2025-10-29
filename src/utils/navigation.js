@@ -127,6 +127,18 @@ export async function processJobListings(page, applicationData) {
 
 async function closeModal(page) {
   try {
+    // Check for discard confirmation modal first (blocks other clicks)
+    const discardConfirmModal = await page.$('[data-test-modal-id="data-test-easy-apply-discard-confirmation"]');
+    if (discardConfirmModal) {
+      console.log('Discard confirmation modal blocking - clicking discard');
+      const discardBtn = await page.$('button:has-text("Discard")');
+      if (discardBtn) {
+        await discardBtn.click();
+        await randomWait(page);
+        return;
+      }
+    }
+    
     const closeBtn = await page.$('button.artdeco-modal__dismiss');
     if (closeBtn) {
       await closeBtn.click();

@@ -127,9 +127,15 @@ async function handleValidationError(page) {
       await randomWait(page);
       
       const saveBtn = await page.$('button:has-text("Save")');
+      const discardBtn = await page.$('button:has-text("Discard")');
+      
       if (saveBtn) {
         console.log('Saving application due to validation error');
         await saveBtn.click();
+        await randomWait(page);
+      } else if (discardBtn) {
+        console.log('Save not found, discarding application due to validation error');
+        await discardBtn.click();
         await randomWait(page);
       }
     }
