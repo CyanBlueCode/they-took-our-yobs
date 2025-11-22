@@ -1,0 +1,19 @@
+{
+  "strictMatch": [
+    "C++",
+    "C#",
+    ".NET",
+    "founding",
+    "react native",
+    "ruby on rails"
+  ],
+  "wordBoundaryMatch": [
+    "java",
+    "php",
+    "rust",
+    "kotlin"
+  ],
+  "allowedExceptions": [
+    "javascript"
+  ]
+}

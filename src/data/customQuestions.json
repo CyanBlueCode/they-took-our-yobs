@@ -2554,5 +2554,1821 @@
         "value": "No"
       }
     ]
+  },
+  {
+    "jobId": "4332339243",
+    "question": "Please confirm if you possess a technical certification in a computer or web-related field, or have equivalent work experience.Please confirm if you possess a technical certification in a computer or web-related field, or have equivalent work experience.",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-10-29T05:11:47.024Z"
+  },
+  {
+    "jobId": "4332339243",
+    "question": "Please specify your years of experience using JIRA for tracking stories and bugs.Please specify your years of experience using JIRA for tracking stories and bugs.",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-10-29T05:11:47.032Z"
+  },
+  {
+    "jobId": "4332339243",
+    "question": "Please specify your years of experience in building web interfaces with HTML, CSS, and JavaScriptPlease specify your years of experience in building web interfaces with HTML, CSS, and JavaScript",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-10-29T05:11:47.035Z"
+  },
+  {
+    "jobId": "4332339243",
+    "question": "Please specify your years of experience in react-based website implementationPlease specify your years of experience in react-based website implementation",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-10-29T05:11:47.038Z"
+  },
+  {
+    "jobId": "4332339243",
+    "question": "Please specify your years of experience in NextJS-based website implementationPlease specify your years of experience in NextJS-based website implementation",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-10-29T05:11:47.041Z"
+  },
+  {
+    "jobId": "4332339243",
+    "question": "Please specify your years of experience in AstroJS-based website implementationPlease specify your years of experience in AstroJS-based website implementation",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-10-29T05:11:47.043Z"
+  },
+  {
+    "jobId": "4332339243",
+    "question": "Please specify your years of experience in bug isolation & troubleshootingPlease specify your years of experience in bug isolation & troubleshooting",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-10-29T05:11:47.045Z"
+  },
+  {
+    "jobId": "4314295057",
+    "question": "Do you agree to the additional job application terms, linked in the job description and available at https://www.linkedin.com/help/linkedin/answer/a7729058?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T05:15:42.031Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4314295057",
+    "question": "Are you currently authorized to work in the United States without the need for sponsorship now or in the future?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T05:15:42.051Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4314295057",
+    "question": "Would you be able to begin work within the next 2-4 weeks?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T05:15:42.060Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4314295057",
+    "question": "Are you aligned with the compensation range listed in the job posting?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T05:15:42.068Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4315313024",
+    "question": "Have you built and deployed front-end applications using React.js in the past 3 years?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T05:16:30.981Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4315313024",
+    "question": "Do you have hands-on experience with Azure services (App Services, Functions, etc.) in a production setting?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-10-29T05:16:30.992Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4321848191",
+    "question": "Have you built a product or specific feature end-to-end?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T00:46:55.478Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4334778398",
+    "question": "What are your salary requirements?",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-11-20T01:11:47.992Z"
+  },
+  {
+    "jobId": "4334778398",
+    "question": "Do you have experience with Full Stack?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T01:11:48.038Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4321886768",
+    "question": "Major / Field of study",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-11-20T05:43:11.842Z"
+  },
+  {
+    "jobId": "4321886768",
+    "question": "Month of From",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:43:11.898Z",
+    "options": [
+      {
+        "text": "Month",
+        "value": ""
+      },
+      {
+        "text": "January",
+        "value": "1"
+      },
+      {
+        "text": "February",
+        "value": "2"
+      },
+      {
+        "text": "March",
+        "value": "3"
+      },
+      {
+        "text": "April",
+        "value": "4"
+      },
+      {
+        "text": "May",
+        "value": "5"
+      },
+      {
+        "text": "June",
+        "value": "6"
+      },
+      {
+        "text": "July",
+        "value": "7"
+      },
+      {
+        "text": "August",
+        "value": "8"
+      },
+      {
+        "text": "September",
+        "value": "9"
+      },
+      {
+        "text": "October",
+        "value": "10"
+      },
+      {
+        "text": "November",
+        "value": "11"
+      },
+      {
+        "text": "December",
+        "value": "12"
+      }
+    ]
+  },
+  {
+    "jobId": "4321886768",
+    "question": "Year of From",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:43:12.133Z",
+    "options": [
+      {
+        "text": "Year",
+        "value": ""
+      },
+      {
+        "text": "2025",
+        "value": "2025"
+      },
+      {
+        "text": "2024",
+        "value": "2024"
+      },
+      {
+        "text": "2023",
+        "value": "2023"
+      },
+      {
+        "text": "2022",
+        "value": "2022"
+      },
+      {
+        "text": "2021",
+        "value": "2021"
+      },
+      {
+        "text": "2020",
+        "value": "2020"
+      },
+      {
+        "text": "2019",
+        "value": "2019"
+      },
+      {
+        "text": "2018",
+        "value": "2018"
+      },
+      {
+        "text": "2017",
+        "value": "2017"
+      },
+      {
+        "text": "2016",
+        "value": "2016"
+      },
+      {
+        "text": "2015",
+        "value": "2015"
+      },
+      {
+        "text": "2014",
+        "value": "2014"
+      },
+      {
+        "text": "2013",
+        "value": "2013"
+      },
+      {
+        "text": "2012",
+        "value": "2012"
+      },
+      {
+        "text": "2011",
+        "value": "2011"
+      },
+      {
+        "text": "2010",
+        "value": "2010"
+      },
+      {
+        "text": "2009",
+        "value": "2009"
+      },
+      {
+        "text": "2008",
+        "value": "2008"
+      },
+      {
+        "text": "2007",
+        "value": "2007"
+      },
+      {
+        "text": "2006",
+        "value": "2006"
+      },
+      {
+        "text": "2005",
+        "value": "2005"
+      },
+      {
+        "text": "2004",
+        "value": "2004"
+      },
+      {
+        "text": "2003",
+        "value": "2003"
+      },
+      {
+        "text": "2002",
+        "value": "2002"
+      },
+      {
+        "text": "2001",
+        "value": "2001"
+      },
+      {
+        "text": "2000",
+        "value": "2000"
+      },
+      {
+        "text": "1999",
+        "value": "1999"
+      },
+      {
+        "text": "1998",
+        "value": "1998"
+      },
+      {
+        "text": "1997",
+        "value": "1997"
+      },
+      {
+        "text": "1996",
+        "value": "1996"
+      },
+      {
+        "text": "1995",
+        "value": "1995"
+      },
+      {
+        "text": "1994",
+        "value": "1994"
+      },
+      {
+        "text": "1993",
+        "value": "1993"
+      },
+      {
+        "text": "1992",
+        "value": "1992"
+      },
+      {
+        "text": "1991",
+        "value": "1991"
+      },
+      {
+        "text": "1990",
+        "value": "1990"
+      },
+      {
+        "text": "1989",
+        "value": "1989"
+      },
+      {
+        "text": "1988",
+        "value": "1988"
+      },
+      {
+        "text": "1987",
+        "value": "1987"
+      },
+      {
+        "text": "1986",
+        "value": "1986"
+      },
+      {
+        "text": "1985",
+        "value": "1985"
+      },
+      {
+        "text": "1984",
+        "value": "1984"
+      },
+      {
+        "text": "1983",
+        "value": "1983"
+      },
+      {
+        "text": "1982",
+        "value": "1982"
+      },
+      {
+        "text": "1981",
+        "value": "1981"
+      },
+      {
+        "text": "1980",
+        "value": "1980"
+      },
+      {
+        "text": "1979",
+        "value": "1979"
+      },
+      {
+        "text": "1978",
+        "value": "1978"
+      },
+      {
+        "text": "1977",
+        "value": "1977"
+      },
+      {
+        "text": "1976",
+        "value": "1976"
+      },
+      {
+        "text": "1975",
+        "value": "1975"
+      },
+      {
+        "text": "1974",
+        "value": "1974"
+      },
+      {
+        "text": "1973",
+        "value": "1973"
+      },
+      {
+        "text": "1972",
+        "value": "1972"
+      },
+      {
+        "text": "1971",
+        "value": "1971"
+      },
+      {
+        "text": "1970",
+        "value": "1970"
+      },
+      {
+        "text": "1969",
+        "value": "1969"
+      },
+      {
+        "text": "1968",
+        "value": "1968"
+      },
+      {
+        "text": "1967",
+        "value": "1967"
+      },
+      {
+        "text": "1966",
+        "value": "1966"
+      },
+      {
+        "text": "1965",
+        "value": "1965"
+      },
+      {
+        "text": "1964",
+        "value": "1964"
+      },
+      {
+        "text": "1963",
+        "value": "1963"
+      },
+      {
+        "text": "1962",
+        "value": "1962"
+      },
+      {
+        "text": "1961",
+        "value": "1961"
+      },
+      {
+        "text": "1960",
+        "value": "1960"
+      },
+      {
+        "text": "1959",
+        "value": "1959"
+      },
+      {
+        "text": "1958",
+        "value": "1958"
+      },
+      {
+        "text": "1957",
+        "value": "1957"
+      },
+      {
+        "text": "1956",
+        "value": "1956"
+      },
+      {
+        "text": "1955",
+        "value": "1955"
+      },
+      {
+        "text": "1954",
+        "value": "1954"
+      },
+      {
+        "text": "1953",
+        "value": "1953"
+      },
+      {
+        "text": "1952",
+        "value": "1952"
+      },
+      {
+        "text": "1951",
+        "value": "1951"
+      },
+      {
+        "text": "1950",
+        "value": "1950"
+      },
+      {
+        "text": "1949",
+        "value": "1949"
+      },
+      {
+        "text": "1948",
+        "value": "1948"
+      },
+      {
+        "text": "1947",
+        "value": "1947"
+      },
+      {
+        "text": "1946",
+        "value": "1946"
+      },
+      {
+        "text": "1945",
+        "value": "1945"
+      },
+      {
+        "text": "1944",
+        "value": "1944"
+      },
+      {
+        "text": "1943",
+        "value": "1943"
+      },
+      {
+        "text": "1942",
+        "value": "1942"
+      },
+      {
+        "text": "1941",
+        "value": "1941"
+      },
+      {
+        "text": "1940",
+        "value": "1940"
+      },
+      {
+        "text": "1939",
+        "value": "1939"
+      },
+      {
+        "text": "1938",
+        "value": "1938"
+      },
+      {
+        "text": "1937",
+        "value": "1937"
+      },
+      {
+        "text": "1936",
+        "value": "1936"
+      },
+      {
+        "text": "1935",
+        "value": "1935"
+      },
+      {
+        "text": "1934",
+        "value": "1934"
+      },
+      {
+        "text": "1933",
+        "value": "1933"
+      },
+      {
+        "text": "1932",
+        "value": "1932"
+      },
+      {
+        "text": "1931",
+        "value": "1931"
+      },
+      {
+        "text": "1930",
+        "value": "1930"
+      },
+      {
+        "text": "1929",
+        "value": "1929"
+      },
+      {
+        "text": "1928",
+        "value": "1928"
+      },
+      {
+        "text": "1927",
+        "value": "1927"
+      },
+      {
+        "text": "1926",
+        "value": "1926"
+      },
+      {
+        "text": "1925",
+        "value": "1925"
+      }
+    ]
+  },
+  {
+    "jobId": "4321886768",
+    "question": "Month of To",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:43:12.160Z",
+    "options": [
+      {
+        "text": "Month",
+        "value": ""
+      },
+      {
+        "text": "January",
+        "value": "1"
+      },
+      {
+        "text": "February",
+        "value": "2"
+      },
+      {
+        "text": "March",
+        "value": "3"
+      },
+      {
+        "text": "April",
+        "value": "4"
+      },
+      {
+        "text": "May",
+        "value": "5"
+      },
+      {
+        "text": "June",
+        "value": "6"
+      },
+      {
+        "text": "July",
+        "value": "7"
+      },
+      {
+        "text": "August",
+        "value": "8"
+      },
+      {
+        "text": "September",
+        "value": "9"
+      },
+      {
+        "text": "October",
+        "value": "10"
+      },
+      {
+        "text": "November",
+        "value": "11"
+      },
+      {
+        "text": "December",
+        "value": "12"
+      }
+    ]
+  },
+  {
+    "jobId": "4321886768",
+    "question": "Year of To",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:43:12.370Z",
+    "options": [
+      {
+        "text": "Year",
+        "value": ""
+      },
+      {
+        "text": "2035",
+        "value": "2035"
+      },
+      {
+        "text": "2034",
+        "value": "2034"
+      },
+      {
+        "text": "2033",
+        "value": "2033"
+      },
+      {
+        "text": "2032",
+        "value": "2032"
+      },
+      {
+        "text": "2031",
+        "value": "2031"
+      },
+      {
+        "text": "2030",
+        "value": "2030"
+      },
+      {
+        "text": "2029",
+        "value": "2029"
+      },
+      {
+        "text": "2028",
+        "value": "2028"
+      },
+      {
+        "text": "2027",
+        "value": "2027"
+      },
+      {
+        "text": "2026",
+        "value": "2026"
+      },
+      {
+        "text": "2025",
+        "value": "2025"
+      },
+      {
+        "text": "2024",
+        "value": "2024"
+      },
+      {
+        "text": "2023",
+        "value": "2023"
+      },
+      {
+        "text": "2022",
+        "value": "2022"
+      },
+      {
+        "text": "2021",
+        "value": "2021"
+      },
+      {
+        "text": "2020",
+        "value": "2020"
+      },
+      {
+        "text": "2019",
+        "value": "2019"
+      },
+      {
+        "text": "2018",
+        "value": "2018"
+      },
+      {
+        "text": "2017",
+        "value": "2017"
+      },
+      {
+        "text": "2016",
+        "value": "2016"
+      },
+      {
+        "text": "2015",
+        "value": "2015"
+      },
+      {
+        "text": "2014",
+        "value": "2014"
+      },
+      {
+        "text": "2013",
+        "value": "2013"
+      },
+      {
+        "text": "2012",
+        "value": "2012"
+      },
+      {
+        "text": "2011",
+        "value": "2011"
+      },
+      {
+        "text": "2010",
+        "value": "2010"
+      },
+      {
+        "text": "2009",
+        "value": "2009"
+      },
+      {
+        "text": "2008",
+        "value": "2008"
+      },
+      {
+        "text": "2007",
+        "value": "2007"
+      },
+      {
+        "text": "2006",
+        "value": "2006"
+      },
+      {
+        "text": "2005",
+        "value": "2005"
+      },
+      {
+        "text": "2004",
+        "value": "2004"
+      },
+      {
+        "text": "2003",
+        "value": "2003"
+      },
+      {
+        "text": "2002",
+        "value": "2002"
+      },
+      {
+        "text": "2001",
+        "value": "2001"
+      },
+      {
+        "text": "2000",
+        "value": "2000"
+      },
+      {
+        "text": "1999",
+        "value": "1999"
+      },
+      {
+        "text": "1998",
+        "value": "1998"
+      },
+      {
+        "text": "1997",
+        "value": "1997"
+      },
+      {
+        "text": "1996",
+        "value": "1996"
+      },
+      {
+        "text": "1995",
+        "value": "1995"
+      },
+      {
+        "text": "1994",
+        "value": "1994"
+      },
+      {
+        "text": "1993",
+        "value": "1993"
+      },
+      {
+        "text": "1992",
+        "value": "1992"
+      },
+      {
+        "text": "1991",
+        "value": "1991"
+      },
+      {
+        "text": "1990",
+        "value": "1990"
+      },
+      {
+        "text": "1989",
+        "value": "1989"
+      },
+      {
+        "text": "1988",
+        "value": "1988"
+      },
+      {
+        "text": "1987",
+        "value": "1987"
+      },
+      {
+        "text": "1986",
+        "value": "1986"
+      },
+      {
+        "text": "1985",
+        "value": "1985"
+      },
+      {
+        "text": "1984",
+        "value": "1984"
+      },
+      {
+        "text": "1983",
+        "value": "1983"
+      },
+      {
+        "text": "1982",
+        "value": "1982"
+      },
+      {
+        "text": "1981",
+        "value": "1981"
+      },
+      {
+        "text": "1980",
+        "value": "1980"
+      },
+      {
+        "text": "1979",
+        "value": "1979"
+      },
+      {
+        "text": "1978",
+        "value": "1978"
+      },
+      {
+        "text": "1977",
+        "value": "1977"
+      },
+      {
+        "text": "1976",
+        "value": "1976"
+      },
+      {
+        "text": "1975",
+        "value": "1975"
+      },
+      {
+        "text": "1974",
+        "value": "1974"
+      },
+      {
+        "text": "1973",
+        "value": "1973"
+      },
+      {
+        "text": "1972",
+        "value": "1972"
+      },
+      {
+        "text": "1971",
+        "value": "1971"
+      },
+      {
+        "text": "1970",
+        "value": "1970"
+      },
+      {
+        "text": "1969",
+        "value": "1969"
+      },
+      {
+        "text": "1968",
+        "value": "1968"
+      },
+      {
+        "text": "1967",
+        "value": "1967"
+      },
+      {
+        "text": "1966",
+        "value": "1966"
+      },
+      {
+        "text": "1965",
+        "value": "1965"
+      },
+      {
+        "text": "1964",
+        "value": "1964"
+      },
+      {
+        "text": "1963",
+        "value": "1963"
+      },
+      {
+        "text": "1962",
+        "value": "1962"
+      },
+      {
+        "text": "1961",
+        "value": "1961"
+      },
+      {
+        "text": "1960",
+        "value": "1960"
+      },
+      {
+        "text": "1959",
+        "value": "1959"
+      },
+      {
+        "text": "1958",
+        "value": "1958"
+      },
+      {
+        "text": "1957",
+        "value": "1957"
+      },
+      {
+        "text": "1956",
+        "value": "1956"
+      },
+      {
+        "text": "1955",
+        "value": "1955"
+      },
+      {
+        "text": "1954",
+        "value": "1954"
+      },
+      {
+        "text": "1953",
+        "value": "1953"
+      },
+      {
+        "text": "1952",
+        "value": "1952"
+      },
+      {
+        "text": "1951",
+        "value": "1951"
+      },
+      {
+        "text": "1950",
+        "value": "1950"
+      },
+      {
+        "text": "1949",
+        "value": "1949"
+      },
+      {
+        "text": "1948",
+        "value": "1948"
+      },
+      {
+        "text": "1947",
+        "value": "1947"
+      },
+      {
+        "text": "1946",
+        "value": "1946"
+      },
+      {
+        "text": "1945",
+        "value": "1945"
+      },
+      {
+        "text": "1944",
+        "value": "1944"
+      },
+      {
+        "text": "1943",
+        "value": "1943"
+      },
+      {
+        "text": "1942",
+        "value": "1942"
+      },
+      {
+        "text": "1941",
+        "value": "1941"
+      },
+      {
+        "text": "1940",
+        "value": "1940"
+      },
+      {
+        "text": "1939",
+        "value": "1939"
+      },
+      {
+        "text": "1938",
+        "value": "1938"
+      },
+      {
+        "text": "1937",
+        "value": "1937"
+      },
+      {
+        "text": "1936",
+        "value": "1936"
+      },
+      {
+        "text": "1935",
+        "value": "1935"
+      },
+      {
+        "text": "1934",
+        "value": "1934"
+      },
+      {
+        "text": "1933",
+        "value": "1933"
+      },
+      {
+        "text": "1932",
+        "value": "1932"
+      },
+      {
+        "text": "1931",
+        "value": "1931"
+      },
+      {
+        "text": "1930",
+        "value": "1930"
+      },
+      {
+        "text": "1929",
+        "value": "1929"
+      },
+      {
+        "text": "1928",
+        "value": "1928"
+      },
+      {
+        "text": "1927",
+        "value": "1927"
+      },
+      {
+        "text": "1926",
+        "value": "1926"
+      },
+      {
+        "text": "1925",
+        "value": "1925"
+      }
+    ]
+  },
+  {
+    "jobId": "4340963708",
+    "question": "Do you have experience working with marketplace APIs, such as Amazon, Walmart, Target+, and Mirakl?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:47:09.607Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4323450174",
+    "question": "Are you comfortable with an equity-only compensation model until funding?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:48:57.583Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4323450174",
+    "question": "Can you consistently commit 5–10 hours per week for at least the next 6 months?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:48:57.594Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4323450174",
+    "question": "Do you have at least 3 years of professional experience building production web applications?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:48:57.602Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4323450174",
+    "question": "Do you have 2+ years of experience with React or Next.js in production?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:48:57.612Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4323450174",
+    "question": "Are you comfortable using AI coding tools (e.g., GitHub Copilot, Cursor, Codex) as a core part of your workflow, or willing to ramp up quickly in the first 1–2 months?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:48:57.621Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4323450174",
+    "question": "Have you personally shipped at least one end-to-end feature (frontend + backend + database) into production?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:48:57.630Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4323450174",
+    "question": "Can you provide at least 1 hour of overlap with the Eastern Time Zone (EST) most weeks for reviews or check-ins?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:48:57.639Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4336143792",
+    "question": "Have you mostly worked for startups?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:49:13.647Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4336143792",
+    "question": "Are you a Front End focused engineer?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:49:13.664Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4321932524",
+    "question": "Are you located in the United States?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:52:31.378Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4144546616",
+    "question": "GenderGender",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-11-20T05:55:35.839Z"
+  },
+  {
+    "jobId": "4144546616",
+    "question": "Preferred First Name",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-11-20T05:55:37.281Z"
+  },
+  {
+    "jobId": "4144546616",
+    "question": "What is the US zip code you'll be working from, primarily?",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-11-20T05:55:37.288Z"
+  },
+  {
+    "jobId": "4144546616",
+    "question": "Have you previously worked for Headspace/Ginger?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-20T05:55:41.760Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes, I am a former W2 Employee at Headspace/Ginger",
+        "value": "Yes, I am a former W2 Employee at Headspace/Ginger"
+      },
+      {
+        "text": "Yes, I am a former 1099 Contractor at Headspace/Ginger",
+        "value": "Yes, I am a former 1099 Contractor at Headspace/Ginger"
+      },
+      {
+        "text": "Yes, I am a former Temp Worker at Headspace/Ginger",
+        "value": "Yes, I am a former Temp Worker at Headspace/Ginger"
+      },
+      {
+        "text": "No, I have not previously worked for Headspace/Ginger",
+        "value": "No, I have not previously worked for Headspace/Ginger"
+      }
+    ]
+  },
+  {
+    "jobId": "4322514685",
+    "question": "Will you now or ever in the future require sponsorship to work in the US?Will you now or ever in the future require sponsorship to work in the US?",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-11-20T05:56:19.491Z"
+  },
+  {
+    "jobId": "4322514685",
+    "question": "Do you have at least 5 years of professional software engineering experience?Do you have at least 5 years of professional software engineering experience?",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-11-20T05:56:19.500Z"
+  },
+  {
+    "jobId": "4322514685",
+    "question": "Do you have at least 3 years of professional experience working with either Ruby (preferably Rails) or JavaScript (Node.js or React)?Do you have at least 3 years of professional experience working with either Ruby (preferably Rails) or JavaScript (Node.js or React)?",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-11-20T05:56:19.504Z"
+  },
+  {
+    "jobId": "4322514685",
+    "question": "Are you comfortable mentoring junior engineers and collaborating cross-functionally with product, UX, and dev teams?Are you comfortable mentoring junior engineers and collaborating cross-functionally with product, UX, and dev teams?",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-11-20T05:56:19.508Z"
+  },
+  {
+    "jobId": "4336371575",
+    "question": "Would you be willing to relocate in the future pending an in office presence with relocation costs covered?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-22T00:43:08.463Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4347151083",
+    "question": "Have you completed the following level of education: Associate's Degree?Have you completed the following level of education: Associate's Degree?",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-11-22T01:08:14.416Z"
+  },
+  {
+    "jobId": "4338378403",
+    "question": "Website",
+    "answerType": "text",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:05.726Z"
+  },
+  {
+    "jobId": "4338378403",
+    "question": "Will you now or in the future require sponsorship for employment visa status (e.g., H-1B status)?Will you now or in the future require sponsorship for employment visa status (e.g., H-1B status)?",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:08.799Z"
+  },
+  {
+    "jobId": "4338378403",
+    "question": "Are you currently eligible to work in the U.S. or Canada on a full-time basis?Are you currently eligible to work in the U.S. or Canada on a full-time basis?",
+    "answerType": "boolean",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:08.804Z"
+  },
+  {
+    "jobId": "4338388261",
+    "question": "4+ years of full-stack software engineering experience?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:59.765Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4338388261",
+    "question": "Proven experience leading design and development of production-grade web applications (Flask, React, Next.js).?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:59.774Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4338388261",
+    "question": "Strong skills in SQL design, performance tuning, and Azure-based services (including AI-powered features).?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:59.782Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4338388261",
+    "question": "Experience in Design and lead the architecture of modern, scalable full-stack applications?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:59.791Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4338388261",
+    "question": "Experience to Lead integration of AI-powered features into existing and new applications?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:59.800Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4338388261",
+    "question": "Experience building applications to designing, leading, and guiding the engineering direction of web solutions?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:59.808Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4338388261",
+    "question": "Experience in balancing hands-on development with leading others, influencing architecture decisions, and driving innovation?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:59.818Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4338388261",
+    "question": "Are you a US Citizen or Green card holder?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:59.829Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4338388261",
+    "question": "Are you comfortable with the pay-range $50 - $65 depending on experience?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:59.838Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4338388261",
+    "question": "Are you local to Texas?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:59.847Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
+  },
+  {
+    "jobId": "4333368821",
+    "question": "The salary range is $130-150K. Are you aligned?",
+    "answerType": "dropdown",
+    "answer": null,
+    "timestamp": "2025-11-22T01:13:19.605Z",
+    "options": [
+      {
+        "text": "Select an option",
+        "value": "Select an option"
+      },
+      {
+        "text": "Yes",
+        "value": "Yes"
+      },
+      {
+        "text": "No",
+        "value": "No"
+      }
+    ]
   }
 ]

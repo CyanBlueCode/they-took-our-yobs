@@ -387,6 +387,11 @@ async function fillRadioButtons(page) {
       } catch (error) {
         console.log(`DEBUG: Error: ${error.message}`);
       }
+    } else if (answer === null) {
+      // Log unanswered radio button questions
+      console.log(`DEBUG: No answer found for radio button (?) question, logging`);
+      const url = page.url();
+      logCustomQuestion(url, cleanQuestionText, 'boolean');
     }
   }
 }
@@ -544,6 +549,10 @@ function getCustomAnswer(questionText) {
   }
   
   if (question && question.answer !== null) {
+    // Return boolean values as booleans, not strings
+    if (typeof question.answer === 'boolean') {
+      return question.answer;
+    }
     return question.answer.toString();
   }
   return null;

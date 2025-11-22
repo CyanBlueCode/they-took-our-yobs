@@ -628,5 +628,96 @@
     "answerType": "number",
     "answer": null,
     "timestamp": "2025-10-29T03:21:38.801Z"
+  },
+  {
+    "jobId": "4319461117",
+    "question": "How many years of work experience do you have with Data Processing?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-10-29T05:11:31.082Z"
+  },
+  {
+    "jobId": "4315313024",
+    "question": "How many years of work experience do you have with C#?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-10-29T05:16:29.309Z"
+  },
+  {
+    "jobId": "4310980495",
+    "question": "How many years of work experience do you have with Amazon Dynamodb?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-10-29T05:17:56.490Z"
+  },
+  {
+    "jobId": "4310980495",
+    "question": "How many years of work experience do you have with Angular?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-10-29T05:17:56.496Z"
+  },
+  {
+    "jobId": "4334778398",
+    "question": "How many years do you have as a Software Engineer",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-11-20T01:11:47.955Z"
+  },
+  {
+    "jobId": "4323426980",
+    "question": "How many years of work experience do you have with Cryptocurrency?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-11-20T05:43:51.441Z"
+  },
+  {
+    "jobId": "4323278280",
+    "question": "How many years of work experience do you have with Generative AI?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-11-20T05:46:52.155Z"
+  },
+  {
+    "jobId": "4321932524",
+    "question": "How many years of software engineering experience do you have?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-11-20T05:52:31.352Z"
+  },
+  {
+    "jobId": "4308857340",
+    "question": "How many years of work experience do you have with Vue.js?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-11-20T05:54:36.640Z"
+  },
+  {
+    "jobId": "4338368426",
+    "question": "How many years of work experience do you have with Redux.js?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-11-22T01:09:09.438Z"
+  },
+  {
+    "jobId": "4338388261",
+    "question": "How many years of work experience do you have with Software Engineering Practices?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:59.749Z"
+  },
+  {
+    "jobId": "4338388261",
+    "question": "How many years of work experience do you have with Web Applications?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-11-22T01:11:59.754Z"
+  },
+  {
+    "jobId": "4338228953",
+    "question": "How many years of Legal Services experience do you currently have?",
+    "answerType": "number",
+    "answer": null,
+    "timestamp": "2025-11-22T01:14:13.036Z"
   }
 ]
