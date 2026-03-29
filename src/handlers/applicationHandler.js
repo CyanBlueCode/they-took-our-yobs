@@ -575,6 +575,10 @@ function getAnswerForLabel(label, page = null) {
   const customAnswer = getCustomAnswer(cleanLabel);
   console.log(`DEBUG: Custom answer: ${customAnswer}`);
   if (customAnswer !== null) {
+    // Check if answer is "omit" - trigger immediate discard
+    if (customAnswer === 'omit') {
+      throw new Error('OMIT_JOB');
+    }
     return customAnswer;
   }
 

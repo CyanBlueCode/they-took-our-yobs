@@ -16,7 +16,7 @@ import fs from 'fs';
 
   // Start on the page you normally go to after login
   await page.goto(
-    'https://www.linkedin.com/jobs/search/?f_AL=true&f_WT=2&geoId=103644278&origin=JOB_SEARCH_PAGE_JOB_FILTER&refresh=true'
+    'https://www.linkedin.com/jobs/search/?currentJobId=4365295359&distance=25&f_AL=true&f_SB2=5&f_WT=2&geoId=103644278&keywords=javascript%20react&origin=JOB_SEARCH_PAGE_SEARCH_BUTTON&refresh=true'
   );
 
   console.log(

@@ -3,7 +3,7 @@
     "jobId": "4318626318",
     "question": "How many years of work experience do you have with QuickBooks?",
     "answerType": "number",
-    "answer": 0,
+    "answer": "omit",
     "timestamp": "2025-10-28T05:11:36.665Z"
   },
   {
@@ -98,626 +98,66 @@
     "timestamp": "2025-10-28T19:04:53.865Z"
   },
   {
-    "jobId": "4316203347",
-    "question": "How many years of work experience do you have with Webrtc?",
+    "jobId": "4390972681",
+    "question": "How many years of work experience do you have with Apache Ant?",
     "answerType": "number",
     "answer": null,
-    "timestamp": "2025-10-28T19:05:33.235Z"
+    "timestamp": "2026-03-29T00:15:03.336Z"
   },
   {
-    "jobId": "4316203347",
-    "question": "How many years of work experience do you have with Test-Driven Development?",
+    "jobId": "4390972681",
+    "question": "How many years of work experience do you have with Enterprise Software?",
     "answerType": "number",
     "answer": null,
-    "timestamp": "2025-10-28T19:05:33.244Z"
+    "timestamp": "2026-03-29T00:15:03.352Z"
   },
   {
-    "jobId": "4316203347",
-    "question": "How many years of experience do you have with GoLang development?",
+    "jobId": "4390956753",
+    "question": "How many years of experience do you have building full-stack applications using React and TypeScript?",
     "answerType": "number",
     "answer": null,
-    "timestamp": "2025-10-28T19:05:33.251Z"
+    "timestamp": "2026-03-29T00:15:57.453Z"
   },
   {
-    "jobId": "4332490469",
-    "question": "How many years of work experience do you have with Java?",
+    "jobId": "4390956753",
+    "question": "How many years of experience do you have designing and building backend systems and APIs?",
     "answerType": "number",
     "answer": null,
-    "timestamp": "2025-10-28T19:05:50.173Z"
+    "timestamp": "2026-03-29T00:15:57.461Z"
   },
   {
-    "jobId": "4318324193",
-    "question": "How many years of work experience do you have with Artificial Intelligence (AI)?",
+    "jobId": "4390956753",
+    "question": "How many years of experience do you have working with SQL and relational databases?",
     "answerType": "number",
     "answer": null,
-    "timestamp": "2025-10-28T19:06:07.228Z"
+    "timestamp": "2026-03-29T00:15:57.467Z"
   },
   {
-    "jobId": "4318324193",
-    "question": "How many years of work experience do you have with Machine Learning?",
+    "jobId": "4390956753",
+    "question": "How many years of experience do you have working at fast-paced startups (Series A–E) building SaaS products with a high engineering bar?",
     "answerType": "number",
     "answer": null,
-    "timestamp": "2025-10-28T19:06:07.237Z"
+    "timestamp": "2026-03-29T00:15:57.472Z"
   },
   {
-    "jobId": "4318324193",
-    "question": "How many years of work experience do you have with Autonomous Systems (Internet)?",
+    "jobId": "4390877651",
+    "question": "How many years of work experience do you have with Palantir?",
+    "answerType": "number",
+    "answer": "omit",
+    "timestamp": "2026-03-29T00:19:42.290Z"
+  },
+  {
+    "jobId": "4384216358",
+    "question": "How many years have you professionally worked with Golang?",
     "answerType": "number",
     "answer": null,
-    "timestamp": "2025-10-28T19:06:07.243Z"
+    "timestamp": "2026-03-29T00:20:55.282Z"
   },
   {
-    "jobId": "4318403332",
-    "question": "How many years of professional software engineering experience do you have?",
+    "jobId": "4384216358",
+    "question": "How many years have you professionally worked with Python?",
     "answerType": "number",
     "answer": null,
-    "timestamp": "2025-10-28T19:06:59.456Z"
-  },
-  {
-    "jobId": "4318403332",
-    "question": "How many years of technical leadership experience do you have, such as leading complex projects or making architectural decisions?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T19:06:59.464Z"
-  },
-  {
-    "jobId": "4315328022",
-    "question": "How many years of work experience do you have with Wagtail CMS?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T19:21:14.171Z"
-  },
-  {
-    "jobId": "4315328022",
-    "question": "How many years of work experience do you have with Django?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T19:21:16.815Z"
-  },
-  {
-    "jobId": "4332700802",
-    "question": "How many years of experience do you have working with Blockchain?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T19:21:35.118Z"
-  },
-  {
-    "jobId": "4317711180",
-    "question": "How many years of work experience do you have with Docker Products?",
-    "answerType": "number",
-    "answer": 5,
-    "timestamp": "2025-10-28T19:21:59.938Z"
-  },
-  {
-    "jobId": "4319212894",
-    "question": "How many years of work experience do you have with PostgreSQL?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T19:22:40.105Z"
-  },
-  {
-    "jobId": "4319430661",
-    "question": "How many years of work experience do you have with Clojure?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T19:23:28.166Z"
-  },
-  {
-    "jobId": "4316622587",
-    "question": "How many years of work experience do you have with Technical Product Management?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T19:39:47.588Z"
-  },
-  {
-    "jobId": "4332093512",
-    "question": "How many years of work experience do you have with Apache Kafka?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T19:46:55.443Z"
-  },
-  {
-    "jobId": "4332093512",
-    "question": "How many years of work experience do you have with Spring Boot?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T19:46:55.450Z"
-  },
-  {
-    "jobId": "4332801027",
-    "question": "How many years of work experience do you have with Microsoft Azure?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T19:47:26.879Z"
-  },
-  {
-    "jobId": "4317965204",
-    "question": "How many years of work experience do you have with Core Java?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T19:50:16.993Z"
-  },
-  {
-    "jobId": "4317965204",
-    "question": "How many years of work experience do you have with Microservices?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T19:50:17.003Z"
-  },
-  {
-    "jobId": "4311670508",
-    "question": "How many years of work experience do you have with MISO?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T19:52:04.506Z"
-  },
-  {
-    "jobId": "4311670508",
-    "question": "How many years of work experience do you have with PJM?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T19:52:04.515Z"
-  },
-  {
-    "jobId": "4323907346",
-    "question": "How many years of work experience do you have with React?",
-    "answerType": "number",
-    "answer": 8,
-    "timestamp": "2025-10-28T20:08:55.757Z"
-  },
-  {
-    "jobId": "4323907346",
-    "question": "How many years of work experience do you have with GoLang?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:08:55.765Z"
-  },
-  {
-    "jobId": "4323907346",
-    "question": "How many years of work experience do you have with Docker?",
-    "answerType": "number",
-    "answer": 5,
-    "timestamp": "2025-10-28T20:08:55.770Z"
-  },
-  {
-    "jobId": "4323907346",
-    "question": "How many years of work experience do you have with Vibe Coding?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:08:55.774Z"
-  },
-  {
-    "jobId": "4318313582",
-    "question": "How many years of work experience do you have with Three.js?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:09:12.668Z"
-  },
-  {
-    "jobId": "4319094514",
-    "question": "How many years of work experience do you have with Git?",
-    "answerType": "number",
-    "answer": 10,
-    "timestamp": "2025-10-28T20:09:42.648Z"
-  },
-  {
-    "jobId": "4315331934",
-    "question": "How many years of work experience do you have with Kubernetes?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:10:01.208Z"
-  },
-  {
-    "jobId": "4315331934",
-    "question": "How many years of Management experience do you currently have?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T20:10:01.216Z"
-  },
-  {
-    "jobId": "4318473926",
-    "question": "How many years of E-Learning Providers experience do you currently have?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:10:50.219Z"
-  },
-  {
-    "jobId": "4318473926",
-    "question": "How many years of experience do you have with React/Angular?",
-    "answerType": "number",
-    "answer": 8,
-    "timestamp": "2025-10-28T20:10:50.229Z"
-  },
-  {
-    "jobId": "4318473926",
-    "question": "How many years of experience do you have with Golang?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:10:50.235Z"
-  },
-  {
-    "jobId": "4318473926",
-    "question": "How many years of experience do you have with Java/ Java spring boot?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:10:50.241Z"
-  },
-  {
-    "jobId": "4319460944",
-    "question": "How many years of work experience do you have with Warehouse Management Systems?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:11:07.895Z"
-  },
-  {
-    "jobId": "4319460944",
-    "question": "How many years of work experience do you have with Software as a Service (SaaS)?",
-    "answerType": "number",
-    "answer": 9,
-    "timestamp": "2025-10-28T20:11:07.904Z"
-  },
-  {
-    "jobId": "4319166234",
-    "question": "How many years of work experience do you have with PHP?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:11:42.039Z"
-  },
-  {
-    "jobId": "4319166234",
-    "question": "How many years of work experience do you have with WordPress?",
-    "answerType": "number",
-    "answer": 1,
-    "timestamp": "2025-10-28T20:11:42.044Z"
-  },
-  {
-    "jobId": "4319166234",
-    "question": "How many years of work experience do you have with Apache?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:11:42.048Z"
-  },
-  {
-    "jobId": "4318919064",
-    "question": "How many years of experience do you have managing teams in a startup environment (seed-series B)?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:12:30.480Z"
-  },
-  {
-    "jobId": "4316374348",
-    "question": "How many years of experience do you have working with vector databases (e.g., Pinecone, Google Vector Store, Vespa, AstraDB)?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:13:22.016Z"
-  },
-  {
-    "jobId": "4316374348",
-    "question": "How many years of work experience do you have with FastAPI?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-28T20:13:22.021Z"
-  },
-  {
-    "jobId": "4317517259",
-    "question": "How many years of work experience do you have with COSMOS?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:15:50.360Z"
-  },
-  {
-    "jobId": "4305272860",
-    "question": "How many years of work experience do you have with Spring Framework?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:16:24.387Z"
-  },
-  {
-    "jobId": "4305272860",
-    "question": "How many years of Retail experience do you currently have?",
-    "answerType": "number",
-    "answer": 0,
-    "timestamp": "2025-10-28T20:16:27.286Z"
-  },
-  {
-    "jobId": "4318533299",
-    "question": "How many years of experience do you have leading front-end development in a React environment??",
-    "answerType": "number",
-    "answer": 3,
-    "timestamp": "2025-10-28T20:17:01.454Z"
-  },
-  {
-    "jobId": "4318533299",
-    "question": "How many years of front-end development experience do you have working with modern JavaScript frameworks?",
-    "answerType": "number",
-    "answer": 10,
-    "timestamp": "2025-10-28T20:17:01.461Z"
-  },
-  {
-    "jobId": "4316246372",
-    "question": "How many years of work experience do you have with Leading Development Teams?",
-    "answerType": "number",
-    "answer": 3,
-    "timestamp": "2025-10-28T20:17:16.507Z"
-  },
-  {
-    "jobId": "4310039430",
-    "question": "How many years of NextJS do you have?",
-    "answerType": "number",
-    "answer": 1,
-    "timestamp": "2025-10-28T20:17:33.860Z"
-  },
-  {
-    "jobId": "4310039430",
-    "question": "How many years of ecommerce development do you have?",
-    "answerType": "number",
-    "answer": 2,
-    "timestamp": "2025-10-28T20:17:33.868Z"
-  },
-  {
-    "jobId": "4310039430",
-    "question": "How many years of frontend React experience do you have?",
-    "answerType": "number",
-    "answer": 8,
-    "timestamp": "2025-10-28T20:17:33.872Z"
-  },
-  {
-    "jobId": "4274024847",
-    "question": "How many years of work experience do you have with Databases?",
-    "answerType": "number",
-    "answer": 3,
-    "timestamp": "2025-10-28T20:17:49.880Z"
-  },
-  {
-    "jobId": "4274024847",
-    "question": "How many years of work experience do you have with LLM and/or AI?",
-    "answerType": "number",
-    "answer": 1,
-    "timestamp": "2025-10-28T20:17:49.888Z"
-  },
-  {
-    "jobId": "4318936099",
-    "question": "How many years of experience you with Backend or Full-Stack Development?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T01:56:35.034Z"
-  },
-  {
-    "jobId": "4318941045",
-    "question": "How many years of Transportation, Logistics, Supply Chain and Storage experience do you currently have?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T02:33:00.246Z"
-  },
-  {
-    "jobId": "4318520559",
-    "question": "How many years of work experience do you have with Ruby on Rails?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T02:33:25.108Z"
-  },
-  {
-    "jobId": "4318520559",
-    "question": "How many years of work experience do you have with Full-Stack Development?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T02:33:25.119Z"
-  },
-  {
-    "jobId": "4318366504",
-    "question": "How many years of work experience do you have with Business Project Management?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T02:44:39.356Z"
-  },
-  {
-    "jobId": "4332311883",
-    "question": "How many years of work experience do you have with Magento?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T02:47:03.289Z"
-  },
-  {
-    "jobId": "4319279747",
-    "question": "How many years of work experience do you have with Jira?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T02:48:22.825Z"
-  },
-  {
-    "jobId": "4315363203",
-    "question": "How many years of work experience do you have with Geographic Information Systems (GIS)?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:16:23.659Z"
-  },
-  {
-    "jobId": "4315363203",
-    "question": "How many years of work experience do you have with Quantum GIS?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:16:23.668Z"
-  },
-  {
-    "jobId": "4316973665",
-    "question": "How many years of work experience do you have using C#?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:16:50.858Z"
-  },
-  {
-    "jobId": "4316973665",
-    "question": "How many years of work experience do you have using C++?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:16:50.867Z"
-  },
-  {
-    "jobId": "4316973665",
-    "question": "How many years of work experience do you have using LTE?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:16:50.872Z"
-  },
-  {
-    "jobId": "4318498905",
-    "question": "How many years of experience with Node.js or equivalent java script frameworks?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:17:12.353Z"
-  },
-  {
-    "jobId": "4314395586",
-    "question": "How many years of work experience do you have with Front-End Development?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:18:09.204Z"
-  },
-  {
-    "jobId": "4319530105",
-    "question": "How many years of work experience do you have with Web Development?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:19:43.812Z"
-  },
-  {
-    "jobId": "4319530105",
-    "question": "How many years of work experience do you have with Shopify?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:19:43.821Z"
-  },
-  {
-    "jobId": "4319530105",
-    "question": "How many years of work experience do you have with E-Commerce?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:19:43.827Z"
-  },
-  {
-    "jobId": "4315968785",
-    "question": "How many years of work experience do you have with .NET Framework?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:20:00.488Z"
-  },
-  {
-    "jobId": "4317928953",
-    "question": "How many years of work experience do you have with Linux?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:20:15.481Z"
-  },
-  {
-    "jobId": "4317928953",
-    "question": "How many years of work experience do you have with NoSQL?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:20:15.489Z"
-  },
-  {
-    "jobId": "4267633448",
-    "question": "How many years of work experience do you have with Laravel?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:21:38.792Z"
-  },
-  {
-    "jobId": "4267633448",
-    "question": "How many years of work experience do you have with Drupal?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T03:21:38.801Z"
-  },
-  {
-    "jobId": "4319461117",
-    "question": "How many years of work experience do you have with Data Processing?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T05:11:31.082Z"
-  },
-  {
-    "jobId": "4315313024",
-    "question": "How many years of work experience do you have with C#?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T05:16:29.309Z"
-  },
-  {
-    "jobId": "4310980495",
-    "question": "How many years of work experience do you have with Amazon Dynamodb?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T05:17:56.490Z"
-  },
-  {
-    "jobId": "4310980495",
-    "question": "How many years of work experience do you have with Angular?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-10-29T05:17:56.496Z"
-  },
-  {
-    "jobId": "4334778398",
-    "question": "How many years do you have as a Software Engineer",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-11-20T01:11:47.955Z"
-  },
-  {
-    "jobId": "4323426980",
-    "question": "How many years of work experience do you have with Cryptocurrency?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-11-20T05:43:51.441Z"
-  },
-  {
-    "jobId": "4323278280",
-    "question": "How many years of work experience do you have with Generative AI?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-11-20T05:46:52.155Z"
-  },
-  {
-    "jobId": "4321932524",
-    "question": "How many years of software engineering experience do you have?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-11-20T05:52:31.352Z"
-  },
-  {
-    "jobId": "4308857340",
-    "question": "How many years of work experience do you have with Vue.js?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-11-20T05:54:36.640Z"
-  },
-  {
-    "jobId": "4338368426",
-    "question": "How many years of work experience do you have with Redux.js?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-11-22T01:09:09.438Z"
-  },
-  {
-    "jobId": "4338388261",
-    "question": "How many years of work experience do you have with Software Engineering Practices?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-11-22T01:11:59.749Z"
-  },
-  {
-    "jobId": "4338388261",
-    "question": "How many years of work experience do you have with Web Applications?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-11-22T01:11:59.754Z"
-  },
-  {
-    "jobId": "4338228953",
-    "question": "How many years of Legal Services experience do you currently have?",
-    "answerType": "number",
-    "answer": null,
-    "timestamp": "2025-11-22T01:14:13.036Z"
+    "timestamp": "2026-03-29T00:20:55.293Z"
   }
 ]

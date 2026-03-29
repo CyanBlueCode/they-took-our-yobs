@@ -29,7 +29,8 @@ export async function loadAllJobCards(page, maxScrolls = 20) {
 
 import { processEasyApplyModal } from '../handlers/applicationHandler.js';
 import { randomWait } from './timing.js';
-import omitKeywords from '../data/omitKeywords.json' with { type: 'json' };
+import filterKeywords from '../data/filterKeywords.json' with { type: 'json' };
+const { requiredKeywords, omitKeywords } = filterKeywords;
 
 export async function processJobListings(page, applicationData) {
   // Grab fresh job cards each loop iteration to avoid stale element handles
@@ -45,12 +46,31 @@ export async function processJobListings(page, applicationData) {
       continue;
     }
 
+    // Check if this job was previously dismissed
+    const dismissedText = await card.$(':has-text("We won\'t show you this job again.")');
+    const appliedText = await card.$(':has-text("Applied")');
+    if (dismissedText || appliedText) {
+      console.log(`Job #${i + 1} was previously dismissed or applied already - skipping`);
+      continue;
+    }
+
+    // Check job title for omit keywords before clicking (early dismiss, no panel render needed)
+    const jobTitle = await card.$('.job-card-list__title');
+    const titleText = jobTitle ? (await jobTitle.textContent()).toLowerCase() : '';
+
+    const titleOmitMatch = omitKeywords.titleKeywords.find((kw) => titleText.includes(kw.toLowerCase()));
+    if (titleOmitMatch) {
+      console.log(`Job #${i + 1} title contains omit keyword "${titleOmitMatch}" - dismissing`);
+      await dismissJob(page, i);
+      continue;
+    }
+
     await card.scrollIntoViewIfNeeded();
     await card.click();
     await randomWait(page); // let right-hand panel render
 
-    // Check job description for omit keywords
-    if (await shouldSkipJob(page, i + 1)) {
+    // Check required + omit keywords across title and description combined
+    if (await shouldSkipJob(page, i + 1, titleText)) {
       await dismissJob(page, i);
       continue; // Skip to next job
     }
@@ -99,8 +119,14 @@ export async function processJobListings(page, applicationData) {
       try {
         await processEasyApplyModal(page, applicationData);
       } catch (error) {
-        console.error(`Error processing application for job #${i + 1}:`, error);
-        await closeModal(page);
+        if (error.message === 'OMIT_JOB') {
+          console.log(`Job #${i + 1} marked as omit - discarding and dismissing`);
+          await closeModal(page);
+          await dismissJob(page, i);
+        } else {
+          console.error(`Error processing application for job #${i + 1}:`, error);
+          await closeModal(page);
+        }
       }
     } else {
       console.log(`No Easy Apply or Continue for job #${i + 1}`);
@@ -133,7 +159,16 @@ export async function processJobListings(page, applicationData) {
   }
 }
 
-async function shouldSkipJob(page, jobNumber) {
+// Returns the first category key that has no matching keyword in text, or null if all pass
+function checkRequiredKeywords(text) {
+  for (const [category, keywords] of Object.entries(requiredKeywords)) {
+    const hasMatch = keywords.some((kw) => text.includes(kw.toLowerCase()));
+    if (!hasMatch) return category;
+  }
+  return null;
+}
+
+async function shouldSkipJob(page, jobNumber, titleText = '') {
   try {
     // Check for missing qualifications card
     // REVIEW LinkedIn missing qualification card is inaccurate
@@ -151,7 +186,8 @@ async function shouldSkipJob(page, jobNumber) {
     if (companyBox) {
       const companyText = await companyBox.textContent();
       const lowerCompanyText = companyText.toLowerCase();
-      if (lowerCompanyText.includes('1 employee') || lowerCompanyText.includes('2-10 employees')) {
+      if (lowerCompanyText.includes('1 employee')) {
+      // if (lowerCompanyText.includes('1 employee') || lowerCompanyText.includes('2-10 employees')) {
         console.log(`Job #${jobNumber} is from small startup with <10 employees - skipping`);
         return true;
       }
@@ -166,8 +202,16 @@ async function shouldSkipJob(page, jobNumber) {
     
     const descriptionText = await jobDescription.textContent();
     const lowerText = descriptionText.toLowerCase();
-    
-    // Check strict match keywords (case insensitive)
+    const combinedText = `${titleText} ${lowerText}`;
+
+    // 1. Required keywords: every category must have at least one match across title + description
+    const failedCategory = checkRequiredKeywords(combinedText);
+    if (failedCategory) {
+      console.log(`Job #${jobNumber} missing required keyword for category "${failedCategory}" - skipping`);
+      return true;
+    }
+
+    // 2. Omit keywords: strict match (case insensitive)
     for (const keyword of omitKeywords.strictMatch) {
       if (lowerText.includes(keyword.toLowerCase())) {
         console.log(`Job #${jobNumber} contains omit keyword "${keyword}" - skipping`);
@@ -175,7 +219,7 @@ async function shouldSkipJob(page, jobNumber) {
       }
     }
     
-    // Check word boundary keywords with exceptions
+    // 3. Omit keywords: word boundary match with allowed exceptions
     for (const keyword of omitKeywords.wordBoundaryMatch) {
       const regex = new RegExp(`\\b${keyword.toLowerCase()}\\b`, 'i');
       if (regex.test(lowerText)) {

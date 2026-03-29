@@ -1,0 +1,43 @@
+{
+  "requiredKeywords": {
+    "lang": ["javascript", "typescript", "java-script", "type-script", "js", "ts"],
+    "framework": ["react", "react.js", "next.js", "vite"],
+    "role": ["engineer", "developer", "tech lead", "lead", "consultant"]
+  },
+  "omitKeywords": {
+    "strictMatch": [
+      "C++",
+      "C#",
+      ".NET",
+      "founding",
+      "react native",
+      "ruby on rails",
+      "angular",
+      "blockchain",
+      "series A"
+    ],
+    "wordBoundaryMatch": [
+      "java",
+      "php",
+      "rust",
+      "kotlin"
+    ],
+    "allowedExceptions": [
+      "javascript"
+    ],
+    "titleKeywords": [
+      "ai",
+      "palantir",
+      "backend",
+      "early stage",
+      "founding",
+      "angular",
+      ".NET",
+      "iOS",
+      "PHP",
+      "blockchain",
+      "C++"
+    ]
+  },
+  "preferentialKeywords": ["frontend", "front-end", "front", "fullstack", "full-stack", "UI", "next.js", "material ui", "mui", "redux"]
+}

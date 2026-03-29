@@ -1,9 +1,9 @@
 {
   "loginUserName": "chaseyang33@gmail.com",
-  "loginPassword": "123",
+  "loginPassword": "",
   "developmentMode": true,
   "pauseOnValidationError": true,
-  "pauseDurationSeconds": 10,
+  "pauseDurationSeconds": 5,
   "randomTimeout": {
     "minMs": 1000,
     "maxMs": 3000
